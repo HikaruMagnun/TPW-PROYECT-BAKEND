@@ -22,8 +22,9 @@
         $tableRows .= '<td><img src="' . $row['IMAGE'] . '" width="100"></td>';
         $tableRows .= '<td>' . $row['PRECIO'] . '</td>';
         $tableRows .= '</tr>';
-        $tableRows .= '<h1> Esto es codigo html </h1>';
+        
     }
+    $tableRows .= '<h1> Esto es codigo html </h1>';
     echo $tableRows;
 
 ?>
