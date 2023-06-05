@@ -1,16 +1,5 @@
 <?php
-$host = 'db.fnaxymkdzcvseznghoup.supabase.co';
-$port = '5432';
-$dbname = 'postgres';
-$user = 'postgres';
-$password = 'O65zb5JlLLBQvPG1';
-
-// Realizar la conexión
-$dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password";
-try {
-    $db = new PDO($dsn);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Obtener el contenido de la tabla Xiaomi
+    include 'conexion.php';
     $query = 'SELECT * FROM "Apple" ';
     $stmt = $db->prepare($query);
     $stmt->execute();
@@ -29,7 +18,5 @@ try {
     } else {
         echo "La tabla Xiaomi está vacía.";
     }
-} catch (PDOException $e) {
-    echo "Error al conectar a la base de datos: " . $e->getMessage();
-}
+
 ?>
