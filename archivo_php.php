@@ -14,7 +14,10 @@ if ($response) {
     $data = json_decode($response, true);
     // Imprimir el resultado
     print_r($data);
-} else {
+} if (curl_errno($ch)) {
+    echo 'Error en la solicitud: ' . curl_error($ch);
+}
+else {
     echo "Error al realizar la solicitud a la API de Supabase.";
 }
 ?>
