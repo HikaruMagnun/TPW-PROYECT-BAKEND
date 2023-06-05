@@ -10,7 +10,7 @@
     
     $tableRows = ''; // Variable para almacenar las filas de la tabla
 
-    foreach ($result as $row) {
+    /*foreach ($result as $row) {
         $tableRows .= '<tr>';
         $tableRows .= '<td>' . $row['ID'] . '</td>';
         $tableRows .= '<td>' . $row['NOMBRE'] . '</td>';
@@ -23,7 +23,7 @@
         $tableRows .= '<td>' . $row['PRECIO'] . '</td>';
         $tableRows .= '</tr>';
         
-    }
+    }*/
     $tableRows .= '<h1> Esto es codigo html </h1>';
     echo $tableRows;
 
