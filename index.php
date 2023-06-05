@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>test</h1>
-    <h1> <? php include 'archivo_php.php'; ?></h1>
+    <h1> <?php include 'archivo_php.php'; ?></h1>
 </body>
 </html>
