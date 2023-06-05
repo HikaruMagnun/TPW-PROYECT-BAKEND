@@ -10,20 +10,24 @@ $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password
 try {
     $db = new PDO($dsn);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Obtener las tablas disponibles
-    $query = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'";
+    // Obtener el contenido de la tabla Xiaomi
+    $query = "SELECT * FROM Xiaomi";
     $stmt = $db->prepare($query);
     $stmt->execute();
-    $tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Mostrar las tablas
-    if (count($tables) > 0) {
-        echo "Tablas disponibles:<br>";
-        foreach ($tables as $table) {
-            echo "- $table<br>";
+    // Mostrar el contenido de la tabla Xiaomi
+    if (count($result) > 0) {
+        echo "Contenido de la tabla Xiaomi:<br>";
+        foreach ($result as $row) {
+            echo "- ";
+            foreach ($row as $column => $value) {
+                echo "$column: $value | ";
+            }
+            echo "<br>";
         }
     } else {
-        echo "No hay tablas disponibles en la base de datos.";
+        echo "La tabla Xiaomi está vacía.";
     }
 } catch (PDOException $e) {
     echo "Error al conectar a la base de datos: " . $e->getMessage();
