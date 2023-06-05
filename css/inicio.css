@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.all_inicio {
+  background-color: #132849;
+  padding: 0;
+  object-fit: cover;
+  margin: 0;
+}
+.inicio_ofer_contenedor {
+  background-color: #132849;
+}
+/*mr sell*/
+.inicio_mrsearch_contenedor,
+.inicio_mrsell_contenedor {
+  position: relative;
+}
+.inicio_mrsearch_content,
+.inicio_mrsell_content {
+  overflow: hidden;
+}
+
+.inicio_mrsell_botonS,
+.inicio_ofer_botonS {
+  float: right;
+}
+
+.inicio_mrsearch_inicador .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  opacity: 0.2;
+  border-radius: 0;
+}
+.inicio_mrsearch_elment {
+  text-align: center;
+}
+#inicio_mrsearch h1 {
+  color: #9fef00;
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 35pt;
+  font-weight: 750;
+  text-align: center;
+}
+.inicio_section_title {
+  color: #9fef00ce;
+  font-family: sans-serif;
+  line-height: 0.1;
+  font-size: 23pt;
+  font-weight: 750;
+  text-align: center;
+}
+.inicio_mrsearch_content h2 {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20pt;
+  font-family: "Comme";
+}
+.inicio_mrsearch_content img {
+  width: 85%;
+  height: 300px;
+}
+
+.inicio_mrsell_element {
+  flex-direction: column;
+  width: 200px;
+  border-style: dotted;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #2e4e81;
+}
+
+.inicio_mrsell_element ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.inicio_mrsell_element_cell_image img {
+  width: 120px;
+  height: 200px;
+}
+.inicio_mrsell_element_cell_name {
+  color: #ffffffc2;
+  font-family: "comme";
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.inicio_mrsell_element_cell_image {
+  text-align: center;
+}
+.inicio_mrsell_element_cell_descrip {
+  height: 115px;
+  text-align: left;
+  color: #ffffffc9;
+}
+.inicio_mrsell_element_cell_buton {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+@media screen and (max-width: 800px) {
+  body {
+    padding: 40px 0;
+  }
+
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .contenido-principal > * {
+    width: 100%;
+  }
+}

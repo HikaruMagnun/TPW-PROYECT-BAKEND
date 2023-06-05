@@ -1,5 +1,5 @@
 <?php
-    include 'conexion.php';
+    include 'php/conexion.php';
     $query = 'SELECT * FROM "Apple" ';
     $stmt = $db->prepare($query);
     $stmt->execute();

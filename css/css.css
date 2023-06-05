@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Comme:wght@100&family=Open+Sans:wght@300&display=swap");
+html,
+body {
+  margin: 0;
+}
+.page {
+  display: flex;
+  height: 100%;
+}
+
+#contenido {
+  position: absolute;
+  top: 0;
+  left: 230px;
+  right: 0;
+  bottom: 0;
+  flex: 1;
+}
+#contenido iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.menu {
+  flex: 1;
+  position: fixed;
+  background-color: #111927;
+  width: 230px;
+  height: 100%;
+}
+
+.menu_logo img {
+  width: 100%;
+  height: auto;
+}
+.menu_pestaña_elememt {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 21px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.menu_pestaña ul {
+  padding: 0;
+  list-style: none;
+}
+.menu_pestaña_elememt h4 {
+  font-family: "Open Sans", sans-serif;
+}

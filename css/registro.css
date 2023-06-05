@@ -1,0 +1,111 @@
+#carrito_registro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #162133;
+  border-radius: 10px;
+  border: 7px solid #7ca32e;
+  box-shadow: 0 0 30px #9fef00;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  padding: 13px;
+  display: none;
+  z-index: 10000000;
+  width: 35%;
+}
+
+.carrito_registro-h3 {
+  text-align: center;
+  color: #9fef00;
+  text-shadow: 5px 5px 5px #45a049;
+  font-size: 30px;
+}
+
+.carrito_registro-p {
+  margin-top: 7px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.carrito_registro-hr {
+  margin-top: 7px;
+}
+
+.carrito_formRegistro-h4 {
+  margin-top: 7px;
+  text-align: center;
+  color: #b7e1cd;
+  font-size: 30px;
+}
+
+.carrito_registro-div label {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 15%;
+}
+
+.input,
+.select {
+  display: block;
+  width: 70%;
+  padding: 5px;
+  background-color: transparent;
+  color: #b8b8b8;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 3px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ffffff;
+}
+
+input::placeholder {
+  color: #b8b8b8;
+}
+
+.select > option {
+  color: #ffffff;
+  background-color: #141d2b;
+}
+
+.carrito_registro-botones {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+#cancelar {
+  width: 25%;
+  padding: 10px;
+  background-color: #112239;
+  color: #0ffff8;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+#enviar{
+  width: 25%;
+  padding: 10px;
+  background-color: #112239;
+  color: #0ffff8;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+#enviar:hover,
+#cancelar:hover {
+  background-color: #0ffff8;
+  color: #112239;
+} 

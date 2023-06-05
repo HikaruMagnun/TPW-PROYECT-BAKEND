@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros</title>
+    <style>
+      body {
+        background-image: url("Fondo.jpg");
+        background-color: #132849;
+      }
+      h1 {
+        color: #9fef00;
+        font-family: sans-serif;
+        margin: 0;
+        font-size: 35pt;
+        font-weight: 750;
+        text-align: center;
+      }
+
+      .Titulo {
+        text-align: center;
+      }
+
+      .Contenedor {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .Contenedor .Fila {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .Contenedor figure {
+        position: relative;
+        height: 500px;
+        width: 500px;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        margin: 10px;
+      }
+
+      .Contenedor figure img {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out;
+        border-radius: 20px;
+      }
+
+      .Contenedor figure .Capa {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        backdrop-filter: blur(15px);
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+      }
+
+      .Contenedor figure:hover > .Capa {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .Contenedor figure:hover > img {
+        transform: scale(1.3);
+      }
+
+      .Contenedor figure .Capa p {
+        color: #8b5518;
+        font-size: 17px;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 220px;
+        margin: auto;
+        padding-top: 3%;
+        font-family: "Roboto Slab", serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="Titulo">NOSOTROS</h1>
+    <div class="Contenedor">
+      <div class="Fila">
+        <figure>
+          <img src="img nosotros/Fondo1.jpg" alt="" />
+          <div class="Capa">
+            <p>
+              En nuestra tienda de venta de celulares, nuestro equipo de trabajo
+              está compuesto por profesionales con<br />
+              experiencia en el sector de los celulares. Todos ellos están
+              altamente capacitados y comprometidos con<br />
+              brindar el mejor servicio a nuestros clientes. Nuestro equipo está
+              en constante actualización y capacitación,<br />
+              lo que nos permite ofrecer un servicio de calidad y atención
+              personalizada a nuestros clientes.
+            </p>
+          </div>
+        </figure>
+        <figure>
+          <img src="img nosotros/Fondo2.jpg" alt="" />
+          <div class="Capa">
+            <p>
+              En nuestra tienda de venta de celulares nos enfocamos
+              exclusivamente en la venta de smartphones de las<br />
+              marcas más reconocidas en el mercado. Nuestro objetivo es brindar
+              a nuestros clientes una experiencia<br />
+              única y satisfactoria al momento de adquirir un dispositivo móvil
+              y satisfacer sus necesidades en cuanto<br />
+              a telefonía móvil se refiere. No ofrecemos servicios de reparación
+              o mantenimiento, nos enfocamosúnicamente<br />
+              en la venta de celulares nuevos.
+            </p>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="Contenedor">
+      <div class="Fila">
+        <figure>
+          <img src="img nosotros/Fondo3.jpg" alt="" />
+          <div class="Capa">
+            <p>
+              En nuestra tienda de venta de celulares nos destacamos por ofrecer
+              una amplia variedad de smartphones de
+              <br />
+              marcas reconocidas, con un equipo de trabajo altamente capacitado
+              y con amplia experiencia en el sector
+              <br />
+              de la telefonía móvil. Además, brindamos atención personalizada y
+              planes de financiamiento, seguros y
+              <br />
+              programas de lealtad y descuentos exclusivos para nuestros
+              clientes, todo con el objetivo de satisfacer
+              <br />
+              sus necesidades y convertirnos en su proveedor preferido en el
+              sector.
+            </p>
+          </div>
+        </figure>
+        <figure>
+          <img src="img nosotros/Fondo4.jpg" alt="" />
+          <div class="Capa">
+            <p>
+              En nuestra tienda de venta de celulares, nos enfocamos en brindar
+              una experiencia única y satisfactoria a
+              <br />
+              nuestros clientes, ofreciendo una atención personalizada y de
+              calidad desde el momento en que ingresan a
+              <br />
+              nuestra tienda o se ponen en contacto con nosotros en línea.
+              Contamos con un equipo altamente capacitado
+              <br />
+              en telefonía móvil, ofreciendo un servicio post-venta de calidad,
+              y planes de financiamiento, seguros y
+              <br />
+              programas de lealtad y descuentos exclusivos para nuestros
+              clientes.
+            </p>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
