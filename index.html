@@ -2,11 +2,17 @@
 <html>
 <head>
     <title>Llamada a PHP desde JavaScript</title>
+    
+</head>
+<body>
+    <table id="resultado">
+
+    </table>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: 'php\archivo_php.php', // Ruta al archivo PHP
+                url: 'php/archivo_php.php', // Ruta al archivo PHP
                 type: 'GET', // Método de la solicitud (GET, POST, etc.)
                 dataType: 'string', // Tipo de datos esperados en la respuesta
                 success: function(response) {
@@ -19,10 +25,5 @@
             });
         });
     </script>
-</head>
-<body>
-    <table id="resultado">
-
-    </table>
 </body>
 </html>
