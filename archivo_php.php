@@ -11,7 +11,7 @@ try {
     $db = new PDO($dsn);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Obtener el contenido de la tabla Xiaomi
-    $query = "SELECT * FROM Xiaomi";
+    $query = 'SELECT * FROM "Apple" ';
     $stmt = $db->prepare($query);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
