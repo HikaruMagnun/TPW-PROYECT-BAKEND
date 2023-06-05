@@ -14,7 +14,7 @@
             $.ajax({
                 url: 'php/archivo_php.php', // Ruta al archivo PHP
                 type: 'GET', // Método de la solicitud (GET, POST, etc.)
-                dataType: 'string', // Tipo de datos esperados en la respuesta
+                dataType: 'html', // Tipo de datos esperados en la respuesta
                 success: function(response) {
                     // El resultado del archivo PHP se encuentra en la variable 'response'
                     $('#resultado').html(response); // Imprimir el resultado en un elemento HTML
