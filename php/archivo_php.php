@@ -10,20 +10,7 @@
     
     $tableRows = ''; // Variable para almacenar las filas de la tabla
 
-    /*foreach ($result as $row) {
-        
-        $tableRows .= '<td>' . $row['ID'] . '</td>';
-        $tableRows .= '<td>' . $row['NOMBRE'] . '</td>';
-        $tableRows .= '<td>' . $row['PANTALLA'] . '</td>';
-        $tableRows .= '<td>' . $row['BATERIA'] . '</td>';
-        $tableRows .= '<td>' . $row['SISTEMA OPERATIVO'] . '</td>';
-        $tableRows .= '<td>' . $row['CAMARA'] . '</td>';
-        $tableRows .= '<td>' . $row['CAPACIDAD'] . '</td>';
-        $tableRows .= '<td><img src="' . $row['IMAGE'] . '" width="100"></td>';
-        $tableRows .= '<td>' . $row['PRECIO'] . '</td>';
-        $tableRows .= '</tr>';
-        
-    }*/
+    
     $tableRows .= '<h1> Esto es codigo html </h1>';
     echo $tableRows;
 
