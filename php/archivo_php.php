@@ -11,7 +11,7 @@
     $tableRows = ''; // Variable para almacenar las filas de la tabla
 
     /*foreach ($result as $row) {
-        $tableRows .= '<tr>';
+        
         $tableRows .= '<td>' . $row['ID'] . '</td>';
         $tableRows .= '<td>' . $row['NOMBRE'] . '</td>';
         $tableRows .= '<td>' . $row['PANTALLA'] . '</td>';
