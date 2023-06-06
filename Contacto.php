@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/846a5e64df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="logo">CONTACTO</h1>
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-info">
+                <h3>Contáctenos</h3>
+                <ul>
+                    <li>
+                        <h4><i class="fas fa-phone"></i> Nuestro números de contacto son:</h4>
+                        <p>985623201</p>
+                        <p>986231542</p>
+                    </li>
+                    <li>
+                        <h4> <i class="fa-regular fa-clock"></i> Horarios de atención:</h4>
+                        <p>Lunes a Sábado: 8:00 a.m. a 6:00 p.m.</p>
+                        <p>Domingo: 8:00 a.m. a 2:00 p.m.</p>
+                    </li>
+                    <li>
+                        <h4><i class="fa-solid fa-at"></i> Visita nuestras redes sociales:</h4>
+                        <p><i class="fa-brands fa-facebook"></i> <a href="www.facebook.com">Facebook</a></p>
+                        <p><i class="fa-brands fa-instagram"></i> <a href="www.instagram.com">Instagram</a></p>
+                        <p><i class="fa-brands fa-twitter"></i> <a href="www.twitter.com">Twitter</a></p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h4><i class="fas fa-map-marker-alt"></i> Visitanos en nuestro local:</h4>
+                        <p>Av. Nicolás Ayllón, Ate 15487</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7804.860198067603!2d-76.88566662355467!3d-12.013883369465738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c3c864ac48f5%3A0xed1bde4c798d786e!2sUTP!5e0!3m2!1ses!2spe!4v1681690686748!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                    <h3>Escríbenos tus preguntas y te las resolveremos a la brevedad.</h3>
+                    <form action="" method="post">
+                        <p>
+                            <label>Nombres:</label>
+                            <input type="text" placeholder="Ingrese Nombre" name="nombre" required="">
+                        </p>
+                        <p>
+                            <label>Telefono:</label>
+                            <input type="text"  placeholder="Ingrese Telefono" name="telefono" required="">
+                        </p>
+                        <p class="block">
+                            <label>Correo electrónico:</label>
+                            <input type="email"  placeholder="Ingrese email" name="email" required="">
+                        </p>
+                        <p class="block">
+                            <label>Mensaje:</label>
+                            <textarea name="msj" rows="3" placeholder="Ingresa tu mensaje"></textarea>
+                        </p>
+                        <p class="block">
+                            <input class="boletin" type="checkbox" name="boletin"> Suscribirse al boletin de noticias
+                        </p>
+                        <p class="block">
+                            <input type="submit">
+                        </p>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <?php
+    include("php/Correo.php");
+    ?>
+</body>
+</html>
