@@ -73,8 +73,13 @@ body {
   margin: 20px;
   font-size: 17px;
 }
+.all_celulares td {
+  text-align: center;
+  align-items:center;
+}
 .all_celulares b {
   text-align: center;
+
   color: #ffffff;
   font-size: 23px;
   font-family: "comme";
