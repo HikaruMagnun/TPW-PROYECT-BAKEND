@@ -48,6 +48,11 @@ body {
   color: #ffffff;
   font-size: 20px;
 }
+
+.menu_pestaña_elememt :hover{
+  cursor: pointer;
+}
+
 .menu_pestaña ul {
   padding: 0;
   list-style: none;
