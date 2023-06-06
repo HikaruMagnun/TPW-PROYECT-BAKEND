@@ -1,16 +1,17 @@
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 body::-webkit-scrollbar-track {
-  background: rgb(36, 74, 92);
+  background: #003f66;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #141d2b;
+  background-color: #00acea;
   border-radius: 20px;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
 }
+
 body {
   margin: 0;
 }
