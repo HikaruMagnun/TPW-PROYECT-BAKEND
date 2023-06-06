@@ -29,10 +29,7 @@
         <main>
             <center>
             <table border="5">
-                <?php 
-                    $parametro = "Apple";
-                    include 'php/archivo_php.php'
-                ?>
+                <?php include 'php/archivo_php.php'?>
             </table>
             </center>
         </main>
