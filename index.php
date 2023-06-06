@@ -36,9 +36,9 @@
             <li>
               <div
                 class="menu_pestaña_elememt"
-                onclick="cargarContenido('Samsung.html')"
+                onclick="cargarContenido('Samsung.php')"
                 id="menu_pestaña_elememt_categorias"
-                data-url="Samsung.html"
+                data-url="Samsung.php"
               >
                 &nbsp;
                 <i class="fa-solid fa-bars"></i>
