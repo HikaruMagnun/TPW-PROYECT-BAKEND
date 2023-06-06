@@ -1,11 +1,16 @@
 <?php
-    $destinatario = 'Joseluis_180302@hotmail.com';
    $nombre = $_POST['nombre'];
    $email = $_POST['email'];
    $msj = $_POST['msj'];
-   $header = "From: $email";
-   $mensaje = $msj . "\nAtentamente: " . $nombre;
-   mail($destinatario, $mensaje, $header);
-   echo "<script>alert('Correo enviado exitosamente')</script>";
-   echo "<script>setTimeout(\"location.href='Contacto.html'\", 1000)</script>"
+//insert into "Comentarios" values ('ssa','fsd','gsdg');
+   $sql = "INSERT INTO "Comentarios" VALUES (:correo, :nombre, :mensaje)";
+   $stmt = $db->prepare($sql);
+
+   // Asignar valores a los parámetros de la consulta
+   
+   $stmt->bindParam(':correo', $email);
+   $stmt->bindParam(':nombre', $nombre);
+   $stmt->bindParam(':mensaje', $msj);
+   // Ejecutar la consulta
+   $stmt->execute();
 ?>
