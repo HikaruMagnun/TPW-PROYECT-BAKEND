@@ -1,4 +1,4 @@
-<?php
+<?
    include 'php/conexion.php';
    $nombre = $_POST['nombre'];
    $email = $_POST['email'];
