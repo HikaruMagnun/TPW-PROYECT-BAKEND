@@ -36,7 +36,6 @@
             <li>
               <div
                 class="menu_pestaña_elememt"
-                onclick="cargarContenido('Samsung.php')"
                 id="menu_pestaña_elememt_categorias"
                 data-url="Samsung.php"
               >
