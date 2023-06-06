@@ -75,7 +75,6 @@ body {
 
 .carrito_div {
   display: flex;
-  flex-direction: column-reverse;
   justify-content: center;
   background-color: #ffffff;
   flex-wrap: wrap;
