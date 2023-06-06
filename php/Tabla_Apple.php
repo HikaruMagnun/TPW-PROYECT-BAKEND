@@ -9,38 +9,32 @@
     // Estructura de la tabla;
     // ID, NOMBRE, PANTALLA , BATERIA, SISTEMA OPERATIVO, CAMARA, CAPACIDAD , IMAGE(link), PRECIO 
    
-    $tableRows = ''; // Variable para almacenar las filas de la tabla
-    $counter = 0;
+    echo '<div class="carrito_form-celulares">';
+
     foreach ($result as $row) {
-        if ($counter % 4 === 0) {
-            echo '<tr>';
-        }
-    
-        echo '<td class="a" height="300" width="330px">';
-        echo '<img src="' . $row['Image'] . '" alt="Imagen del producto" width="330" >';
-        echo '</td>';
-    
-        echo '<td width="400px"> <b>' .$row['Nombre'] .'</b> ';
-        echo '<ul type="square">';
         
+    
+        echo '<div class="carrito_div" name="carrito_div">';
+        echo '<label for="celular">';
+        echo ' <h2>'. $row['Nombre'] .'</h2>';
+        echo '<div class="carrito_contenedor-img">';
+        echo '<img';
+        echo ' src="'.$row['Image'].'"';
+        echo '/>';
+        echo '</div>';
+        echo '<ul>';
         echo '<li>Pantalla: ' . $row['Pantalla (pulgadas)'] . '</li>';
         echo '<li>Batería: ' . $row['Bateria (mAh)'] . '</li>';
         echo '<li>Sistema Operativo: ' . $row['S.O.'] . '</li>';
         echo '<li>Cámara: ' . $row['Camara (MP)'] . '</li>';
         echo '<li>Capacidad: ' . $row['Capacidad (GB)'] . '</li>';
-        echo '<li>Precio: ' . $row['Precio'] . '</li>';
         echo '</ul>';
+        echo '</label>';
         echo '<button class="button-add" onclick="add("APPLE IPHONE 14",' . $row['Precio'] .' type="submit")"> COMPRAR S/.'.$row['Precio'].'</button>';
-        echo '</td>';
-    
-        $counter++;
-        if ($counter % 4 === 0) {
-            echo '</tr>';
-        }
+        echo '</div>';
+        
     }
-    if ($counter % 4 !== 0) {
-        echo '</tr>';
-    }   
+    echo '</div>';
     
     
 

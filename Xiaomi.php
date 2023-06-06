@@ -27,11 +27,7 @@
             
         </header>
         <main>
-            <center>
-            <table border="5">
-                <?php include 'php/Tabla_Xiaomi.php'?>
-            </table>
-            </center>
+            <?php include 'php/Tabla_Xiaomi.php'?>
         </main> 
             
     </div>

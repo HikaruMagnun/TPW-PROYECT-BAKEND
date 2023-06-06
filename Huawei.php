@@ -28,11 +28,7 @@
             
         </header>
         <main>
-            <center>
-            <table border="5">
-                <?php include 'php/Tabla_Huawei.php'?>
-            </table>
-            </center>
+            <?php include 'php/Tabla_Huawei.php'?>
         </main>
 
     </div>

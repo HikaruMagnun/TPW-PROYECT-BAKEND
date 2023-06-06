@@ -27,11 +27,9 @@
             
         </header>
         <main>
-            <center>
-            <table border="5">
-                <?php include 'php/Tabla_Apple.php'?>
-            </table>
-            </center>
+            
+            <?php include 'php/Tabla_Apple.php'?>
+            
         </main>
         
 
