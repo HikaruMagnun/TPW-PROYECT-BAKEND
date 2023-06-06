@@ -9,7 +9,7 @@
     // Estructura de la tabla;
     // ID, NOMBRE, PANTALLA , BATERIA, SISTEMA OPERATIVO, CAMARA, CAPACIDAD , IMAGE(link), PRECIO 
    
-    
+    echo '<div class="carrito_form-celulares">';
     $counter = 0;
     foreach ($result as $row) {
         
@@ -33,7 +33,7 @@
         echo '</div>';
         
     }
-     
+    echo '</div>';
     
     
 
