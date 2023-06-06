@@ -1,7 +1,8 @@
 <?
 
     include 'php/conexion.php';
-    $query = 'SELECT * FROM "Apple" ';
+    $valor = $_GET['parametro'];
+    $query = 'SELECT * FROM ". $valor ." ';
     $stmt = $db->prepare($query);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
