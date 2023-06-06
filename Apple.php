@@ -29,7 +29,7 @@
         <main>
             <center>
             <table border="5">
-                <?php include 'php/archivo_php.php'?>
+                <?php include 'php/Tabla_Apple.php'?>
             </table>
             </center>
         </main>
