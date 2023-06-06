@@ -3,7 +3,7 @@
    $email = $_POST['email'];
    $msj = $_POST['msj'];
 //insert into "Comentarios" values ('ssa','fsd','gsdg');
-   $sql = "INSERT INTO "Comentarios" VALUES (:correo, :nombre, :mensaje)";
+   $sql = 'INSERT INTO "Comentarios" VALUES (:correo, :nombre, :mensaje)';
    $stmt = $db->prepare($sql);
 
    // Asignar valores a los parámetros de la consulta
