@@ -172,7 +172,7 @@
             </table>
             </center>
         </main>
-        <?php include 'php\archivo_php.php'?>
+        <?php include 'php/archivo_php.php'?>
 
     </div>
     <script src="js/celulares.js"></script>
