@@ -16,7 +16,7 @@
       <div class="menu">
         <div class="menu_logo">
           <img
-            src="https://lh3.googleusercontent.com/u/0/drive-viewer/AFGJ81rjLFOi3mnWy__G5S-0RTjv7iRfPRqmpf3Lk6Gh4rorN8Tr93PaDX9JAABLo9s5YCXAvWZoRqgB4zGaQh7p5IxQMkdjuA=w1366-h653"
+            src="https://lh3.googleusercontent.com/u/0/d/1BztHznYZ5NnudZ0HIE3dOwI6VvcMVy_r=w1366-h653-iv1"
             alt=""
           />
         </div>
