@@ -10,7 +10,7 @@
     // ID, NOMBRE, PANTALLA , BATERIA, SISTEMA OPERATIVO, CAMARA, CAPACIDAD , IMAGE(link), PRECIO 
    
     echo '<div class="carrito_form-celulares">';
-    $counter = 0;
+
     foreach ($result as $row) {
         
     
@@ -20,6 +20,7 @@
         echo '<div class="carrito_contenedor-img">';
         echo '<img';
         echo ' src="'.$row['Image'].'"';
+        echo '/>';
         echo '</div>';
         echo '<ul>';
         echo '<li>Pantalla: ' . $row['Pantalla (pulgadas)'] . '</li>';
