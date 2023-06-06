@@ -3,9 +3,9 @@
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $msj = isset($_POST['msj']) ? $_POST['msj'] : '';
 
-    $nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
+    $nombre = filter_var($nombre, FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $msj = filter_var($msj, FILTER_SANITIZE_STRING);
+    $msj = filter_var($msj, FILTER_SANITIZE_SPECIAL_CHARS);
 
     if (!empty($nombre) && !empty($email) && !empty($msj)) {
         $header = "From: $email";
