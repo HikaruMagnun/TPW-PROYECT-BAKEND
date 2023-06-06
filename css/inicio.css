@@ -2,6 +2,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #003f66;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00acea;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+}
+
 .all_inicio {
   background-color: #132849;
   padding: 0;
