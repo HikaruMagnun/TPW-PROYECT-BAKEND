@@ -8,7 +8,7 @@
       src="https://kit.fontawesome.com/076516437a.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>MOVILAND</title>
     <link rel="stylesheet" href="css/css.css" />
   </head>
   <body>
