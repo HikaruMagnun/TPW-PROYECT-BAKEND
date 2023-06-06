@@ -16,18 +16,21 @@
             echo '<tr>';
         }
     
-        echo '<td>';
-        echo '<img src="' . $row['Image'] . '" alt="Imagen del producto">';
+        echo '<td class="a" height="300" width="330px">';
+        echo '<img src="' . $row['Image'] . '" alt="Imagen del producto" width="330" >';
         echo '</td>';
     
-        echo '<td>';
-        echo '<h4>' . $row['Nombre'] . '</h4>';
-        echo '<p>Pantalla: ' . $row['Pantalla (pulgadas)'] . '</p>';
-        echo '<p>Batería: ' . $row['Bateria (mAh)'] . '</p>';
-        echo '<p>Sistema Operativo: ' . $row['S.O.'] . '</p>';
-        echo '<p>Cámara: ' . $row['Camara (MP)'] . '</p>';
-        echo '<p>Capacidad: ' . $row['Capacidad (GB)'] . '</p>';
-        echo '<p>Precio: ' . $row['Precio'] . '</p>';
+        echo '<td width="400px"> <b>' .$row['Nombre'] .'</b> ';
+        echo '<ul type="square">';
+        
+        echo '<li>Pantalla: ' . $row['Pantalla (pulgadas)'] . '</li>';
+        echo '<li>Batería: ' . $row['Bateria (mAh)'] . '</li>';
+        echo '<li>Sistema Operativo: ' . $row['S.O.'] . '</li>';
+        echo '<li>Cámara: ' . $row['Camara (MP)'] . '</li>';
+        echo '<li>Capacidad: ' . $row['Capacidad (GB)'] . '</li>';
+        echo '<li>Precio: ' . $row['Precio'] . '</li>';
+        echo '</ul>';
+        echo '<button class="button-add" onclick="add("APPLE IPHONE 14",' . $row['Precio'] .' type="submit")"> COMPRAR S/.'.$row['Precio'].'</button>';
         echo '</td>';
     
         $counter++;
