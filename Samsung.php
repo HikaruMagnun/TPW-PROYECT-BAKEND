@@ -28,11 +28,8 @@
         </header>
         <main>
         
-            <center>
-            <table border="5">
-                <?php include 'php/Tabla_Samsung.php'?>
-            </table>
-            </center>
+            <?php include 'php/Tabla_Samsung.php'?>
+            
         </main>
     </div>
     <script src="js/celulares.js"></script>
