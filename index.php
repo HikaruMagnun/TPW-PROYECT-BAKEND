@@ -60,7 +60,7 @@
               </div>
             </li>
             <li>
-              <div class="menu_pestaña_elememt" data-url="Contacto.php">
+              <div class="menu_pestaña_elememt" data-url="Contacto.html">
                 &nbsp;
                 <i class="fa-solid fa-phone-volume"></i>
                 <h4>CONTACTANOS</h4>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="contacto.css">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/846a5e64df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -46,14 +46,10 @@
             </div>
             <div class="contact-form">
                     <h3>Escríbenos tus preguntas y te las resolveremos a la brevedad.</h3>
-                    <form action="" method="post">
-                        <p>
+                    <form action="Correo.php" method="post">
+                        <p class="block">
                             <label>Nombres:</label>
                             <input type="text" placeholder="Ingrese Nombre" name="nombre" required="">
-                        </p>
-                        <p>
-                            <label>Telefono:</label>
-                            <input type="text"  placeholder="Ingrese Telefono" name="telefono" required="">
                         </p>
                         <p class="block">
                             <label>Correo electrónico:</label>
@@ -61,20 +57,17 @@
                         </p>
                         <p class="block">
                             <label>Mensaje:</label>
-                            <textarea name="msj" rows="3" placeholder="Ingresa tu mensaje"></textarea>
+                            <textarea name="msj" rows="3" placeholder="Ingresa tu mensaje" id="hp"></textarea>
                         </p>
                         <p class="block">
                             <input class="boletin" type="checkbox" name="boletin"> Suscribirse al boletin de noticias
                         </p>
                         <p class="block">
-                            <input type="submit">
+                            <button type="submit">Enviar</button>
                         </p>
                     </form>
             </div>
         </div>
     </div>
-    <?php
-    include("php/Correo.php");
-    ?>
 </body>
 </html>
