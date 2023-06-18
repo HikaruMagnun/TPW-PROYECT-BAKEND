@@ -17,6 +17,7 @@
     exit();
   } else {
     echo "<script>alert('Usuario no encontrado');</script>";
+    header("refresh:2;url=index.php");
   }
   
 
