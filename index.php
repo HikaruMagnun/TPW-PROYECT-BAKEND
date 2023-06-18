@@ -10,7 +10,7 @@
 <body>
     <div class="inicioSesion">
         <h2>Iniciar sesión</h2>
-        <form action="autentificar.php" method="POST">
+        <form action="php/autentificar.php" method="POST">
             <label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" required>
 
