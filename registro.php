@@ -12,8 +12,8 @@
             <label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" required>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required><br><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required><br><br>
 
             <input type="submit" value="Registrar correo">
         </form>
