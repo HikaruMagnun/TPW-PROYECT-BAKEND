@@ -16,8 +16,7 @@
     header("Location: mainPage.php");
     exit();
   } else {
-    echo "<script>alert('Usuario no encontrado');</script>";
-    header("Location: index.php");
+    echo "<script>alert('Usuario no encontrado'); window.location.href = 'index.php';</script>";
     exit();
   }
   
