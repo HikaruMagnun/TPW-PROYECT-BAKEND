@@ -180,3 +180,106 @@ ul {
 .all_celulares td.a {
   background-color: white;
 }
+
+/*------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+-------------------------*/
+
+@media (max-width: 1230px) {
+
+  .carrito_form-celulares {
+    flex-direction: row;
+    margin-top: 15px;
+    padding: 5%;
+  }
+
+  .carrito_div {
+    max-width: 40%;
+  }
+}
+
+/*------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+-------------------------*/
+
+@media (max-width: 700px) {
+  .carrito_body::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .carrito_body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+
+  .carrito_header-h1 {
+    font-size: 30px;
+  }
+
+  .carrito-img {
+    display: none;
+  }
+
+  .carrito_body-p {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+  }
+
+  .carrito_form-celulares {
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5%;
+  }
+
+  .carrito_div {
+    max-width: 100%;
+  }
+}
+
+/*------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+-------------------------*/
+
+@media (max-width: 400px) {
+
+  .carrito_header-h1 {
+    font-size: 20px;
+  }
+
+  .carrito_opciones-input {
+  }
+
+  .carrito_opciones-aceptar {
+    border: 2px solid #007e06;
+    padding: 5px 15px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+
+  .carrito_opciones-resetear {
+    border: 2px solid #830202;
+    padding: 5px 15px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+}
+
