@@ -17,8 +17,9 @@
     $stmt->bindParam(':correo', $correo);
     $stmt->bindParam(':contrasena', $contrasena);
     $stmt->execute();
-    header("Location: mainPage.php");
+    header("Location: index.php");
     exit();
   } else {
     echo "<h1> error </h1>";
   }
+?>
