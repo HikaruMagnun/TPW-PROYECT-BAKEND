@@ -10,7 +10,7 @@
 <body>
     <div class="inicioSesion">
         <h2>Iniciar sesión</h2>
-        <form action="procesar.php" method="POST">
+        <form action="autentificar.php" method="POST">
             <label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" required>
 
@@ -20,5 +20,7 @@
             <input type="submit" value="Iniciar sesión">
         </form>
     </div>
+    <h3>No tienes cuenta? </h3>
+    <a href="registro.php">REGISTRATE AQUI</a>
 
 </body>
