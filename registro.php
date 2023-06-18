@@ -8,7 +8,7 @@
 <body>
     <div class="registro">
         <h2>Registor de usuarios</h2>
-        <form action="php/registroUsuario.php" method="POST">
+        <form action="registroUsuario.php" method="POST">
             <label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" required>
 
