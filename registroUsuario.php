@@ -20,6 +20,7 @@
     header("Location: index.php");
     exit();
   } else {
-    echo "<h1> error </h1>";
+    echo "<script>alert('correo ya registrado'); window.location.href = 'registro.php';</script>";
+    exit();
   }
 ?>
