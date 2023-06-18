@@ -5,7 +5,7 @@
   //conexion
   include 'php/conexion.php';
   //buscamos usuario
-  $query = "SELECT * FROM USUARIOS WHERE correo = :correo";
+  $query = 'SELECT * from "USUARIOS" where correo = :correo';
   $stmt = $db->prepare($query);
   $stmt->bindParam(':correo', $correo);
   $stmt->execute();
