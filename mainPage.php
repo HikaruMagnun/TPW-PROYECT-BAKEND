@@ -70,7 +70,9 @@
               <div class="menu_pestaña_elememt" data-url="Perfil.php">
                 &nbsp;
                 <i class="fa-solid fa-phone-volume"></i>
-                <h4>PERFIL</h4>
+                <h4>
+                <?php include 'perfilInfo.php'?>
+                </h4>
               </div>
             </li>
           </ul>
