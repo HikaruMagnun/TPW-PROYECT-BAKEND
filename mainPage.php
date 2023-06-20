@@ -1,3 +1,7 @@
+<?php
+session_start(); // Iniciar la sesión
+$correo_usuario = $_SESSION['correo_usuario'];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,7 +75,9 @@
                 &nbsp;
                 <i class="fa-solid fa-phone-volume"></i>
                 <h4>
-                <?php include 'perfilInfo.php'?>
+                  <?php
+                    echo $correo_usuario;
+                  ?>
                 </h4>
               </div>
             </li>
