@@ -9,7 +9,7 @@
 
 <body>
     <?php
-        session_start(); // Iniciar la sesión
+        
 
         // Verificar si el correo electrónico está almacenado en la variable de sesión
         if (isset($_SESSION['correo_usuario'])) {
