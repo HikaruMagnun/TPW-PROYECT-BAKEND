@@ -3,7 +3,7 @@ body {
     background-color: #f2f2f2;
 }
 
-.inicioSesion {
+.registro {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -13,18 +13,19 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.inicioSesion h2 {
+.registro h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.inicioSesion label {
+.registro label {
     display: block;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.inicioSesion input[type="email"],
-.inicioSesion input[type="password"] {
+.registro input[type="email"],
+.registro input[type="password"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -33,7 +34,7 @@ body {
     padding-right: 1px;
 }
 
-.inicioSesion input[type="submit"] {
+.registro input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -43,22 +44,6 @@ body {
     width: 100%;
 }
 
-.inicioSesion input[type="submit"]:hover {
+.registro input[type="submit"]:hover {
     background-color: #45a049;
-}
-
-h3 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: #4CAF50;
-}
-
-a:hover {
-    text-decoration: underline;
 }
