@@ -12,9 +12,12 @@ $correo_usuario = $_SESSION['correo_usuario'];
 </head>
 
 <body>
+    Bienvenido 
     <?php
+
     echo $correo_usuario;
     ?>
+    a nuestra pagina WEB
     
 
 </body>
