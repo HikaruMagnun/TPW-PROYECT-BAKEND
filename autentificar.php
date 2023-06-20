@@ -13,6 +13,8 @@
   $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
   if ( $usuario) {
+    session_start(); // Iniciar la sesión
+    $_SESSION['correo_usuario'] = $correo;
     header("Location: mainPage.php");
     exit();
   } else {
