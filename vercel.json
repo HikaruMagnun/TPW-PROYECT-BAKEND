@@ -1,5 +1,5 @@
 {
-    "build": {
+    "install": {
       "command": "amazon-linux-extras install php7.4"
     }
 }
