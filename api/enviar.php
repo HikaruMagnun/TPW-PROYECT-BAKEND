@@ -16,5 +16,5 @@ if (!empty($nombre) && !empty($correo) && !empty($mensaje)) {
 } else {
     echo "<script>alert('Por favor, complete todos los campos del formulario')</script>";
 }
-echo "<script>setTimeout(\"location.href='Contacto.html'\", 1000)</script>";
+echo "<script>setTimeout(\"location.href='/Contacto.html'\", 1000)</script>";
 ?>
