@@ -11,7 +11,7 @@
     ></script>
     <title>MOVILAND</title>
     <link rel="icon" href="https://lh3.googleusercontent.com/u/0/d/1BztHznYZ5NnudZ0HIE3dOwI6VvcMVy_r=w1366-h653-iv1"/>
-    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="../css/css.css" />
   </head>
   <?php
 // Obtener el valor de la cookie
@@ -88,6 +88,6 @@ $correoUsuario = $_COOKIE['correo_usuario'];
         <iframe name="main" frameborder="0"></iframe>
       </div>
     </div>
-    <script src="js/test.js"></script>
+    <script src="../js/test.js"></script>
   </body>
 </html>
