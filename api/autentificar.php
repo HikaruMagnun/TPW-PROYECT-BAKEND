@@ -14,8 +14,7 @@
   $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
   if ( $usuario) {
-    session_start(); // Iniciar la sesión
-    $_SESSION['correo_usuario'] = $correo;
+    setcookie('correo_usuario', $correo, time() + (86400 * 30), '/');
     header("Location:/mainPage.html");
     exit();
   } else {

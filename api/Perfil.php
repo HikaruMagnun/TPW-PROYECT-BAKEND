@@ -1,6 +1,6 @@
 <?php
-session_start(); // Iniciar la sesión
-$correo_usuario = $_SESSION['correo_usuario'];
+$correoUsuario = $_COOKIE['correo_usuario'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
