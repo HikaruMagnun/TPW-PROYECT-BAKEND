@@ -17,10 +17,10 @@
     $stmt->bindParam(':correo', $correo);
     $stmt->bindParam(':contrasena', $contrasena);
     $stmt->execute();
-    header("Location: index.php");
+    header("Location: index.html");
     exit();
   } else {
-    echo "<script>alert('correo ya registrado'); window.location.href = 'registro.php';</script>";
+    echo "<script>alert('correo ya registrado'); window.location.href = 'registro.html';</script>";
     exit();
   }
 ?>
