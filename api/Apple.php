@@ -28,7 +28,7 @@
         </header>
         <main>
             
-            <?php include __DIR__ .'php/Tabla_Apple.php'?>
+            <?php include __DIR__ .'/Tabla_Apple.php'?>
             
         </main>
         

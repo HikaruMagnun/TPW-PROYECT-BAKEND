@@ -28,7 +28,7 @@
             
         </header>
         <main>
-            <?php include __DIR__ .'php/Tabla_Huawei.php'?>
+            <?php include __DIR__ .'/Tabla_Huawei.php'?>
         </main>
 
     </div>
