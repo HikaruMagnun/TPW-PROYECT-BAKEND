@@ -1,7 +1,4 @@
-<?php
-// Obtener el valor de la cookie
-$correoUsuario = $_COOKIE['correo_usuario'];
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +13,10 @@ $correoUsuario = $_COOKIE['correo_usuario'];
     <link rel="icon" href="https://lh3.googleusercontent.com/u/0/d/1BztHznYZ5NnudZ0HIE3dOwI6VvcMVy_r=w1366-h653-iv1"/>
     <link rel="stylesheet" href="css/css.css" />
   </head>
+  <?php
+// Obtener el valor de la cookie
+$correoUsuario = $_COOKIE['correo_usuario'];
+?>
   <body>
     <div class="page">
       <div class="menu">
