@@ -1,6 +1,9 @@
 <?php
-$correoUsuario = $_COOKIE['correo_usuario'];
-
+// Obtener el valor del parámetro "correo_usuario" de la URL
+if (isset($_GET['correo_usuario'])) {
+  $correoUsuario = $_GET['correo_usuario'];
+ 
+} 
 ?>
 <!DOCTYPE html>
 <html lang="en">

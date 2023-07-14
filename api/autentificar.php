@@ -15,7 +15,7 @@
 
   if ( $usuario) {
     setcookie('correo_usuario', $correo, time() + (86400 * 30), '/');
-    header("Location:/mainPage.html");
+    header("Location:/api/mainPage.html");
     exit();
   } else {
     echo "<script>alert('Usuario o contraseña incorecta'); window.location.href = '/index.html';</script>";

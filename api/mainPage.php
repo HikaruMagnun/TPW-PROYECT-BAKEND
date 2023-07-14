@@ -1,4 +1,7 @@
-
+<?php
+// Obtener el valor de la cookie
+$correoUsuario = $_COOKIE['correo_usuario'];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,7 +71,8 @@
               </div>
             </li>
             <li>
-              <div class="menu_pestaña_elememt" data-url="api/Perfil.php">
+
+              <div class="menu_pestaña_elememt" data-url="api/Perfil.php?correo_usuario=<?php echo urlencode($_COOKIE['correo_usuario']); ?>">
                 &nbsp;
                 <i class="fa-solid fa-phone-volume"></i>
                 <h4>
