@@ -16,10 +16,10 @@
   if ( $usuario) {
     session_start(); // Iniciar la sesión
     $_SESSION['correo_usuario'] = $correo;
-    header("Location: mainPage.html");
+    header("Location:/mainPage.html");
     exit();
   } else {
-    echo "<script>alert('Usuario o contraseña incorecta'); window.location.href = 'index.html';</script>";
+    echo "<script>alert('Usuario o contraseña incorecta'); window.location.href = '/index.html';</script>";
     exit();
   }
   
