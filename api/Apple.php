@@ -10,12 +10,12 @@
     <div class="all_celulares">
         <header>
             <nav class="celulares_nav">
-                <ul class="nav-links">
-                    <li><a onclick="cargarContenido('../Samsung.php')">SAMSUNG</a></li>
-                    <li><a onclick="cargarContenido('../Apple.php')"> APPLE</a></li>
-                    <li><a onclick="cargarContenido('../Huawei.php')">HUAWEI</a></li>
-                    <li><a onclick="cargarContenido('../Xiaomi.php')">XIAOMI</a></li>
-                </ul>
+            <ul class="nav-links">
+                <li><a onclick="cargarContenido('../api/Samsung.php')">SAMSUNG</a></li>
+                <li><a onclick="cargarContenido('../api/Apple.php')"> APPLE</a></li>
+                <li><a onclick="cargarContenido('../api/Huawei.php')">HUAWEI</a></li>
+                <li><a onclick="cargarContenido('../api/Xiaomi.php')">XIAOMI</a></li>
+            </ul>
                 <button id="checkout" class="button-checkout" onclick="pay()">PAGAR</button>
     
             </nav>
