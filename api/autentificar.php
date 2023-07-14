@@ -3,7 +3,8 @@
   $correo = $_POST['correo'];
   $contrasena = $_POST['contrasena'];
   //conexion
-  include 'api\conexion.php';
+  include __DIR__ . '/conexion.php';
+
   //buscamos usuario
   $query = 'SELECT * FROM "USUARIOS" WHERE correo = :correo AND contraseña = :contrasena';
   $stmt = $db->prepare($query);
