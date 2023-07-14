@@ -32,7 +32,7 @@ $correoUsuario = $_COOKIE['correo_usuario'];
               <div
                 class="menu_pestaña_elememt"
                 id="menu_pestaña_elememt_inicio"
-                data-url="Inicio.html"
+                data-url="../Inicio.html"
               >
                 &nbsp;
                 <i class="fa-solid fa-house"></i>
@@ -43,7 +43,7 @@ $correoUsuario = $_COOKIE['correo_usuario'];
               <div
                 class="menu_pestaña_elememt"
                 id="menu_pestaña_elememt_categorias"
-                data-url="api/Samsung.php"
+                data-url="../api/Samsung.php"
               >
                 &nbsp;
                 <i class="fa-solid fa-bars"></i>
@@ -51,21 +51,21 @@ $correoUsuario = $_COOKIE['correo_usuario'];
               </div>
             </li>
             <li>
-              <div class="menu_pestaña_elememt" data-url="Carrito.html">
+              <div class="menu_pestaña_elememt" data-url="../Carrito.html">
                 &nbsp;
                 <i class="fa-solid fa-cart-shopping"></i>
                 <h4>CARRITO</h4>
               </div>
             </li>
             <li>
-              <div class="menu_pestaña_elememt" data-url="Nosotros.html">
+              <div class="menu_pestaña_elememt" data-url="../Nosotros.html">
                 &nbsp;
                 <i class="fa-solid fa-users"></i>
                 <h4>NOSOTROS</h4>
               </div>
             </li>
             <li>
-              <div class="menu_pestaña_elememt" data-url="Contacto.html">
+              <div class="menu_pestaña_elememt" data-url="../Contacto.html">
                 &nbsp;
                 <i class="fa-solid fa-phone-volume"></i>
                 <h4>CONTACTANOS</h4>
@@ -73,7 +73,7 @@ $correoUsuario = $_COOKIE['correo_usuario'];
             </li>
             <li>
 
-              <div class="menu_pestaña_elememt" data-url="api/Perfil.php?correo_usuario=<?php echo urlencode($_COOKIE['correo_usuario']); ?>">
+              <div class="menu_pestaña_elememt" data-url="../api/Perfil.php?correo_usuario=<?php echo urlencode($_COOKIE['correo_usuario']); ?>">
                 &nbsp;
                 <i class="fa-solid fa-phone-volume"></i>
                 <h4>
