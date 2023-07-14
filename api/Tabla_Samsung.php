@@ -1,6 +1,6 @@
 <?
 
-    include 'php/conexion.php';
+    include __DIR__ .'/conexion.php';
     $query = 'SELECT * FROM "Samsung" ';
     $stmt = $db->prepare($query);
     $stmt->execute();

@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 window.addEventListener("load", function () {
   var iframe = document.querySelector("iframe[name='main']");
-  iframe.src = "Inicio.html";
+  iframe.src = "../Inicio.html";
 });
 
 const elementos = document.querySelectorAll(".menu_pestaña_elememt");
