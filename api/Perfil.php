@@ -1,9 +1,9 @@
 <?php
 // Obtener el valor del parámetro "correo_usuario" de la URL
-if (isset($_GET['correo_usuario'])) {
+
   $correoUsuario = $_GET['correo_usuario'];
  
-} 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +69,7 @@ if (isset($_GET['correo_usuario'])) {
             Asimismo, nos complace informarle que hemos registrado su dirección de correo electrónico en nuestro sistema:
         </div>
         <div class="user-email">
-            <?php echo $correo_usuario; ?>
+            <?php echo $correoUsuario; ?>
         </div>
         <div class="message">
             Esta dirección será utilizada para mantenerlo/a informado/a sobre las últimas actualizaciones, noticias relevantes y promociones especiales. Le animamos a revisar su bandeja de entrada con regularidad para no perderse ninguna novedad.
