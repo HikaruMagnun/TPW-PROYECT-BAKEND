@@ -1,5 +1,6 @@
 <?php
- 
+        include __DIR__ .'/conexion.php';
+
     $idCelular = $_POST['id_celular'];
     $correoUsuario = $_POST['correo_usuario'];
 
