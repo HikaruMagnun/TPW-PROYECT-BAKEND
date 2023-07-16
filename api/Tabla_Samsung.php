@@ -33,7 +33,7 @@ foreach ($result as $row) {
     echo '</ul>';
     echo '</label>';
 
-    echo '<button class="button-add" onclick="enviarFormulario(' . $row['id'] . ', ' . $correoUsuario . ')">COMPRAR S/.' . $row['Precio'] . '</button>';
+    echo '<button class="button-add" onclick="enviarFormulario(' . $row['id'] . ', \'' . $correoUsuario . '\')">COMPRAR S/.' . $row['Precio'] . '</button>';
 
 
 
