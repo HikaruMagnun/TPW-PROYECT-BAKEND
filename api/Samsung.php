@@ -44,6 +44,12 @@ $correoUsuario = $_GET['correo_usuario'];
     </div>
     <script src="../js/celulares.js"></script>
     <script>
+        function enviarFormulario(event) {
+            event.preventDefault(); // Prevenir el envío predeterminado del formulario
+            mostrarNotificacion();
+            
+        }
+
         function mostrarNotificacion() {
             Swal.fire({
                 position: 'center',
