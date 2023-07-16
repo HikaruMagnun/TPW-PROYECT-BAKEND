@@ -15,16 +15,18 @@ $result = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);
 
 if ($result) {
     foreach ($result as $row) {
-        echo '<tr>';
+        echo '<tr id="'. $row['id'] .' ">';
         echo '<td>' . $row['Nombre'] . ' $</td>';
         echo '<td>' . $row['Precio'] . '</td>';
         echo '<td>';
-        echo '  <button onclick="subirCantidad(1)"> ↑ </button>';
-        echo '  <span id="cantidad-1">' . $row['cantidad'] . ' </span>';
-        echo '  <button onclick="bajarCantidad(1)"> ↓ </button>';
+        echo '  <button 
+        onclick="subirCantidad(' . $row['id'] . ')"> ↑ </button>';
+        echo '  <span id="cantidad-' . $row['id'] . '">' . $row['cantidad'] . ' </span>';
+        echo '  <button 
+        onclick="bajarCantidad(' . $row['id'] . ')"> ↓ </button>';
         echo '</td>';
         echo '<td id="total-1">$100</td>';
-        echo ' <td><button onclick="eliminarFila(1)">Eliminar</button></td>';
+        echo ' <td><button onclick="eliminarFila(' . $row['id'] . ')">Eliminar</button></td>';
         echo'</tr>';
     }
 }
