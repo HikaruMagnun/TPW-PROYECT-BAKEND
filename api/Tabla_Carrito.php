@@ -4,8 +4,8 @@ include __DIR__ . '/conexion.php';
 
 $querySelect = 'SELECT C."Nombre",C."Precio" ,cantidad,P.id_celular, P.id from "Pedidos" P,"Celulares" C where C."id" = P."id_celular" and P.correo =  \':correo \'';
 $stmtSelect = $db->prepare($querySelect);
-$stmtSelect->bindParam(':correo', $correoUsuario);
-$stmtSelect->execute();
+$stmtSelect->execute([':correo' => $correoUsuario]);
+
 $result = $stmtSelect->fetch(PDO::FETCH_ASSOC);
 
 if($result){
