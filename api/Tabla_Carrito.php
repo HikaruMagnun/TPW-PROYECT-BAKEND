@@ -15,6 +15,7 @@ $result = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);
 
 if ($result) {
     foreach ($result as $row) {
+        echo '<tr>';
         echo '<td>' . $row['Nombre'] . ' $</td>';
         echo '<td>' . $row['Precio'] . '</td>';
         echo '<td>';
@@ -24,6 +25,7 @@ if ($result) {
         echo '</td>';
         echo '<td id="total-1">$100</td>';
         echo ' <td><button onclick="eliminarFila(1)">Eliminar</button></td>';
+        echo'</tr>';
     }
 }
 
