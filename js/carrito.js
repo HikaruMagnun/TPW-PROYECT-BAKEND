@@ -57,6 +57,7 @@ function eliminarFila(id_pedido) {
     type: "POST",
     data: formData,
     success: function (response) {
+      console.log(id_pedido);
       var fila = document.getElementById(id_pedido);
       fila.remove();
       
