@@ -24,10 +24,10 @@
         $stmtUpdate->bindParam(':idCelular', $idCelular);
 
         if ($stmtUpdate->execute()) {
-            echo '<script>alert("Pedido actualizado con éxito.");</script>';
+            echo '<script>console.log("Pedido actualizado con éxito.");</script>';
 
         } else {
-            echo '<script>alert("Error al actualizar el pedido.");</script>';
+            echo '<script>console.log("Error al actualizar el pedido.");</script>';
         }
     } else {
         // No existe un pedido
@@ -37,9 +37,9 @@
         $stmtInsert->bindParam(':idCelular', $idCelular);
 
         if ($stmtInsert->execute()) {
-            echo '<script>alert("Pedido actualizado con éxito.");</script>';
+            echo '<script>console.log("Pedido realizado con éxito.");</script>';
         } else {
-            echo '<script>alert("Error al actualizar el pedido.");</script>';
+            echo '<script>console.log("Error al actualizar el pedido.");</script>';
         }
     }
 
