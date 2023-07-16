@@ -129,30 +129,30 @@ $correoUsuario = $_GET['correo_usuario'];
     </div>
     <script src="../js/celulares.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#myForm').submit(function(event) {
-                event.preventDefault(); // Prevenir el envío predeterminado del formulario
+        function enviarFormulario(id_celular, correo_usuario) {
+            // Crear un objeto con los datos del formulario
+            var formData = {
+                id_celular: id_celular,
+                correo_usuario: correo_usuario
+            };
 
-                // Obtener los datos del formulario
-                var formData = $(this).serialize();
-
-                // Enviar los datos del formulario mediante AJAX
-                $.ajax({
-                    url: '../api/añadirCarrito.php',
-                    type: 'POST',
-                    data: formData,
-                    success: function(response) {
-                        // Realizar acciones después de recibir la respuesta del servidor
-                        mostrarNotificacion();
-                    },
-                    error: function() {
-                        console.log('Error al enviar el formulario');
-                    }
-                });
+            // Enviar los datos del formulario mediante AJAX
+            $.ajax({
+                url: '../api/añadirCarrito.php',
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    // Realizar acciones después de recibir la respuesta del servidor
+                    mostrarNotificacion();
+                },
+                error: function() {
+                    console.log('Error al enviar el formulario');
+                }
             });
-        });
+        }
 
-       
+
+
 
         function mostrarNotificacion() {
             Swal.fire({
