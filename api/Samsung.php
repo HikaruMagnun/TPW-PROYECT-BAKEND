@@ -68,11 +68,7 @@ $correoUsuario = $_GET['correo_usuario'];
             });
         });
 
-        function enviarFormulario(event) {
-            event.preventDefault(); // Prevenir el envío predeterminado del formulario
-            mostrarNotificacion();
-
-        }
+       
 
         function mostrarNotificacion() {
             Swal.fire({
