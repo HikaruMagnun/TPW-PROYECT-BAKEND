@@ -28,7 +28,7 @@ function bajarCantidad(id_pedido) {
     success: function (response) {
       var spanCantidad = document.getElementById("cantidad-" + id_pedido);
       var cantidad = parseInt(spanCantidad.innerText);
-      if ((cantidad = 1)) {
+      if (cantidad == 1) {
         var fila = document.getElementById(id_pedido);
 
         // Verificar si se encontró la fila
@@ -37,8 +37,6 @@ function bajarCantidad(id_pedido) {
           fila.parentNode.removeChild(fila);
         }
       } else {
-        var spanCantidad = document.getElementById("cantidad-" + id_pedido);
-        var cantidad = parseInt(spanCantidad.innerText);
         cantidad -= 1;
         spanCantidad.innerText = cantidad;
       }
@@ -48,6 +46,7 @@ function bajarCantidad(id_pedido) {
     },
   });
 }
+
 
 function eliminarFila(id_pedido) {
   var formData = {
