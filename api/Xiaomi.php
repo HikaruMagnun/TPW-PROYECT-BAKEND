@@ -17,7 +17,6 @@
                 <li><a onclick="cargarContenido('../api/Huawei.php')">HUAWEI</a></li>
                 <li><a onclick="cargarContenido('../api/Xiaomi.php')">XIAOMI</a></li>
             </ul>
-                <button id="checkout" class="button-checkout" onclick="pay()">PAGAR</button>
             </nav>
             <section>
                 <marquee behavior="alternate">

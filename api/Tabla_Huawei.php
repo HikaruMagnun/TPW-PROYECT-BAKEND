@@ -1,7 +1,9 @@
 <?
 
     include __DIR__ .'/conexion.php';
-    $query = 'SELECT * FROM "Huawei" ';
+    
+    $query = 'SELECT * FROM "Celulares" WHERE "Marca" = \'Huawei\';';
+
     $stmt = $db->prepare($query);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,11 +25,11 @@
         echo '/>';
         echo '</div>';
         echo '<ul>';
-        echo '<li>Pantalla: ' . $row['Pantalla (pulgadas)'] . ' pulgadas</li>';
-        echo '<li>Batería: ' . $row['Bateria (mAh)'] . ' mAh</li>';
+        echo '<li>Pantalla: ' . $row['Pantalla(Pulgadas)'] . ' pulgadas</li>';
+        echo '<li>Batería: ' . $row['Bateria(mAh)'] . ' mAh</li>';
         echo '<li>Sistema Operativo: ' . $row['S.O.'] . '</li>';
-        echo '<li>Cámara: ' . $row['Camara (MP)'] . ' MP</li>';
-        echo '<li>Capacidad: ' . $row['Capacidad (GB)'] . ' GB</li>';
+        echo '<li>Cámara: ' . $row['Camara(MP)'] . ' MP</li>';
+        echo '<li>Capacidad: ' . $row['Capacidad(GB)'] . ' GB</li>';
         echo '</ul>';
         echo '</label>';
         echo '<button class="button-add" onclick="add("APPLE IPHONE 14",' . $row['Precio'] .' type="submit")"> COMPRAR S/.'.$row['Precio'].'</button>';
@@ -36,5 +38,7 @@
     }
     echo '</div>';
     
+    
 
 ?>
+
