@@ -32,13 +32,16 @@
         echo '<li>Capacidad: ' . $row['Capacidad(GB)'] . ' GB</li>';
         echo '</ul>';
         echo '</label>';
-        echo '<button class="button-add" onclick="add("APPLE IPHONE 14",' . $row['Precio'] .' type="submit")"> COMPRAR S/.'.$row['Precio'].'</button>';
+
+        
+
+        echo '<form id="myForm">';
+        echo '<input type="hidden" name="id_celular" value="' . $row['id'] . '" />';
+        echo '<input type="hidden" name="correo_usuario" value="' . $correoUsuario . '" />';
+        echo '<button class="button-add" type="submit"  >COMPRAR S/.' . $row['Precio'] . '</button>';
+        echo '</form>';
+
         echo '</div>';
         
     }
     echo '</div>';
-    
-    
-
-?>
-

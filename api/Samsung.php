@@ -22,10 +22,10 @@ $correoUsuario = $_GET['correo_usuario'];
         <header>
             <nav class="celulares_nav">
                 <ul class="nav-links">
-                    <li><a onclick="cargarContenido('../api/Samsung.php')">SAMSUNG</a></li>
-                    <li><a onclick="cargarContenido('../api/Apple.php')"> APPLE</a></li>
-                    <li><a onclick="cargarContenido('../api/Huawei.php')">HUAWEI</a></li>
-                    <li><a onclick="cargarContenido('../api/Xiaomi.php')">XIAOMI</a></li>
+                    <li><a onclick="cargarContenido('../api/Samsung.php?correo_usuario=<?php echo $correoUsuario?>')">SAMSUNG</a></li>
+                    <li><a onclick="cargarContenido('../api/Apple.php?correo_usuario=<?php echo $correoUsuario?>')"> APPLE</a></li>
+                    <li><a onclick="cargarContenido('../api/Huawei.php?correo_usuario=<?php echo $correoUsuario?>')">HUAWEI</a></li>
+                    <li><a onclick="cargarContenido('../api/Xiaomi.php?correo_usuario=<?php echo $correoUsuario?>')">XIAOMI</a></li>
                 </ul>
 
 
@@ -74,7 +74,7 @@ $correoUsuario = $_GET['correo_usuario'];
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Tu compra se almaceno en ',
+                title: 'Tu compra se almaceno en tu carrito',
                 showConfirmButton: false,
                 timer: 1500
             })
