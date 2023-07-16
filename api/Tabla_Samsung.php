@@ -1,7 +1,9 @@
 <?
 
     include __DIR__ .'/conexion.php';
-    $query = 'SELECT * FROM "Samsung" ';
+    
+    $query = 'SELECT * FROM "Celulares" WHERE "Marca" = \'Samsung\';';
+
     $stmt = $db->prepare($query);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
