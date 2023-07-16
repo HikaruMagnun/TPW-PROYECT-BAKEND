@@ -32,14 +32,14 @@ $correoUsuario = $_GET['correo_usuario'];
             </nav>
             <section>
                 <marquee behavior="alternate">
-                    <h1>Celulares Samsung</h1>
+                    <h1>Celulares XIAOMI</h1>
                 </marquee>
             </section>
 
         </header>
         <main>
 
-            <?php include __DIR__ . '/Tabla_Samsung.php' ?>
+            <?php include __DIR__ . '/Tabla_Xiaomi.php' ?>
 
         </main>
     </div>

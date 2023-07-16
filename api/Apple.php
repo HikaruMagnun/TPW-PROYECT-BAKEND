@@ -32,7 +32,7 @@ $correoUsuario = $_GET['correo_usuario'];
             </nav>
             <section>
                 <marquee behavior="alternate">
-                    <h1>Celulares Samsung</h1>
+                    <h1>Celulares APPLE</h1>
                 </marquee>
             </section>
 
