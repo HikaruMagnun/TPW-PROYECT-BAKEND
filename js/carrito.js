@@ -62,7 +62,7 @@ function eliminarFila(id_pedido) {
       // Verificar si se encontró la fila
       if (fila) {
         // Eliminar la fila
-        fila.parentNode.removeChild(fila);
+        fila.remove();
       }
     },
     error: function () {
