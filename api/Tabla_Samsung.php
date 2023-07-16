@@ -38,7 +38,7 @@
         echo '<form method="post" action="../api/añadirCarrito.php">';
         echo '<input type="hidden" name="id_celular" value="' . $row['id'] . '" />';
         echo '<input type="hidden" name="correo_usuario" value="' . $correoUsuario . '" />';
-        echo '<button class="button-add" type="submit" onclick="mostrarNotificacion() >COMPRAR S/.' . $row['Precio'] . '</button>';
+        echo '<button class="button-add" type="submit" onclick="mostrarNotificacion()" >COMPRAR S/.' . $row['Precio'] . '</button>';
         echo '</form>';
 
         echo '</div>';
