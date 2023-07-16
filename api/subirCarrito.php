@@ -12,7 +12,8 @@
     // Consulta UPDATE para modificar la fila existente
     $queryUpdate = 'UPDATE "Pedidos" SET cantidad = :cantidad WHERE id = :id ';
     $stmtUpdate = $db->prepare($queryUpdate);
-    $stmtSelect->bindParam(':id', $id_pedido);
+    $stmtUpdate->bindParam(':cantidad', $cantidadActualizada); // Enlazar la nueva cantidad
+    $stmtUpdate->bindParam(':id', $id_pedido);
 
     $stmtUpdate->execute();
 
