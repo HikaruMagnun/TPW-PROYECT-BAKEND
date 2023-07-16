@@ -3,38 +3,73 @@ function subirCantidad(id_pedido) {
     id_pedido: id_pedido,
   };
   $.ajax({
-    url: '../api/subirCarrito.php',
-    type: 'POST',
+    url: "../api/subirCarrito.php",
+    type: "POST",
     data: formData,
-    success: function(response) {
-      var spanCantidad = document.getElementById('cantidad-' + id_pedido);
+    success: function (response) {
+      var spanCantidad = document.getElementById("cantidad-" + id_pedido);
       var cantidad = parseInt(spanCantidad.innerText);
       cantidad += 1;
       spanCantidad.innerText = cantidad;
     },
-    error: function() {
-        console.log('Error al enviar el formulario');
-    }
-});
+    error: function () {
+      console.log("Error al enviar el formulario");
+    },
+  });
 }
 function bajarCantidad(id_pedido) {
   var formData = {
     id_pedido: id_pedido,
   };
   $.ajax({
-    url: '../api/subirCarrito.php',
-    type: 'POST',
+    url: "../api/bajarCarrito.php",
+    type: "POST",
     data: formData,
-    success: function(response) {
-      var spanCantidad = document.getElementById('cantidad-' + id_pedido);
+    success: function (response) {
+      var spanCantidad = document.getElementById("cantidad-" + id_pedido);
       var cantidad = parseInt(spanCantidad.innerText);
-      cantidad += 1;
-      spanCantidad.innerText = cantidad;
+      if ((cantidad = 1)) {
+        var fila = document.getElementById(id_pedido);
+
+        // Verificar si se encontró la fila
+        if (fila) {
+          // Eliminar la fila
+          fila.parentNode.removeChild(fila);
+        }
+      } else {
+        var spanCantidad = document.getElementById("cantidad-" + id_pedido);
+        var cantidad = parseInt(spanCantidad.innerText);
+        cantidad -= 1;
+        spanCantidad.innerText = cantidad;
+      }
     },
-    error: function() {
-        console.log('Error al enviar el formulario');
-    }
-});
+    error: function () {
+      console.log("Error al enviar el formulario");
+    },
+  });
+}
+
+function eliminarFila(id_pedido) {
+  var formData = {
+    id_pedido: id_pedido,
+  };
+  $.ajax({
+    url: "../api/EliminarCarrito.php",
+    type: "POST",
+    data: formData,
+    success: function (response) {
+      var fila = document.getElementById(id_pedido);
+
+      // Verificar si se encontró la fila
+      if (fila) {
+        // Eliminar la fila
+        fila.parentNode.removeChild(fila);
+      }
+    },
+    error: function () {
+      console.log("Error al enviar el formulario");
+    },
+  });
 }
 function resetear() {
   var carritoDivs = document.querySelectorAll('[name="carrito_div"]');
