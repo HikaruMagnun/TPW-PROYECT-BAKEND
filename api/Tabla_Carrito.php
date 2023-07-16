@@ -6,7 +6,8 @@ $querySelect = 'SELECT C."Nombre",C."Precio" ,cantidad,P.id_celular, P.id from "
 $stmtSelect = $db->prepare($querySelect);
 $stmtSelect->bindParam(':correo', $correoUsuario);
 $stmtSelect->execute();
-$row = $stmtSelect->fetch(PDO::FETCH_ASSOC);
+$result = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 foreach ($result as $row) {
