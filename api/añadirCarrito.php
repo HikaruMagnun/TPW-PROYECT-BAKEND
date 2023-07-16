@@ -23,12 +23,7 @@
         $stmtUpdate->bindParam(':correo', $correoUsuario);
         $stmtUpdate->bindParam(':idCelular', $idCelular);
 
-        if ($stmtUpdate->execute()) {
-            echo '<script>console.log("Pedido actualizado con éxito.");</script>';
-
-        } else {
-            echo '<script>console.log("Error al actualizar el pedido.");</script>';
-        }
+        $stmtUpdate->execute();
     } else {
         // No existe un pedido
         $queryInsert = 'INSERT INTO "Pedidos" (correo, id_celular, cantidad) VALUES (:correo, :idCelular, 1)';
@@ -36,11 +31,7 @@
         $stmtInsert->bindParam(':correo', $correoUsuario);
         $stmtInsert->bindParam(':idCelular', $idCelular);
 
-        if ($stmtInsert->execute()) {
-            echo '<script>console.log("Pedido realizado con éxito.");</script>';
-        } else {
-            echo '<script>console.log("Error al actualizar el pedido.");</script>';
-        }
+        $stmtInsert->execute();
     }
 
 ?>
