@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="../css/registro.css" />
   <title>Carrito</title>
 </head>
+<?php
+// Obtener el valor del parámetro "correo_usuario" de la URL
+
+$correoUsuario = $_GET['correo_usuario'];
+
+
+?>
 
 <body class="carrito_body">
   <header class="carrito_header">

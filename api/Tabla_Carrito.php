@@ -1,4 +1,4 @@
-<?php
+<?
 
 include __DIR__ . '/conexion.php';
 
@@ -6,20 +6,22 @@ $querySelect = 'SELECT C."Nombre",C."Precio" ,cantidad,P.id_celular, P.id from "
 $stmtSelect = $db->prepare($querySelect);
 $stmtSelect->bindParam(':correo', $correoUsuario);
 $stmtSelect->execute();
+$result = $stmtSelect->fetch(PDO::FETCH_ASSOC);
 
-while ($row = $stmtSelect->fetch(PDO::FETCH_ASSOC)) {
-   echo '<tr>';
-   echo '<td>' .$row['Nombre'] .' $</td>';
-   echo '<td>'.$row['Precio'].'</td>';
-   echo '<td>';
-   echo '  <button onclick="subirCantidad(1)"> ↑ </button>';
-   echo '  <span id="cantidad-1"> '.$row['cantidad'] .' </span>';
-   echo '  <button onclick="bajarCantidad(1)"> ↓ </button>';
-   echo '</td>';
-   echo '<td id="total-1">$100</td>';
-   echo ' <td><button onclick="eliminarFila(1)">Eliminar</button></td>';
-   echo '</tr>';
+if($result){
+    foreach ($result as $row) {
+        echo '<td>' .$row ['Nombre'] .' $</td>';
+        echo '<td>'.$row ['Precio'].'</td>';
+        echo '<td>';
+        echo '  <button onclick="subirCantidad(1)"> ↑ </button>';
+        echo '  <span id="cantidad-1"> '.$row['cantidad'] .' </span>';
+        echo '  <button onclick="bajarCantidad(1)"> ↓ </button>';
+        echo '</td>';
+        echo '<td id="total-1">$100</td>';
+       echo ' <td><button onclick="eliminarFila(1)">Eliminar</button></td>';
+     }
+
 }
 
-?>
 
+?>
