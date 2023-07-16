@@ -1,26 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const checkboxes = document.getElementsByName("celular");
-  const carritoDivs = document.querySelectorAll("[name='carrito_div']");
-
-  checkboxes.forEach(function (checkbox, index) {
-    checkbox.addEventListener("change", function () {
-      if (this.checked) {
-        carritoDivs[index].style.backgroundColor = "#5f5f5f";
-        carritoDivs[index].style.boxShadow =
-          "5px 5px 7px #88ca04, -5px -5px 7px #88ca04, 5px -5px 7px #88ca04, -5px 5px 7px #88ca04";
-        carritoDivs[index].style.animation = "none";
-        carritoDivs[index].style.borderColor = "#88ca04";
-        carritoDivs[index].querySelector("img").style.opacity = "0.5";
-      } else {
-        carritoDivs[index].style.backgroundColor = "";
-        carritoDivs[index].style.boxShadow = "";
-        carritoDivs[index].style.animation = "";
-        carritoDivs[index].querySelector("img").style.opacity = "1";
-      }
-    });
-  });
+function subirCantidad(id_pedido) {
+  var formData = {
+    id_pedido: id_pedido,
+  };
+  $.ajax({
+    url: '../api/subirCarrito.php',
+    type: 'POST',
+    data: formData,
+    success: function(response) {
+      var spanCantidad = document.getElementById('cantidad-' + id_pedido);
+      var cantidad = parseInt(spanCantidad.innerText);
+      cantidad += 1;
+      spanCantidad.innerText = cantidad;
+    },
+    error: function() {
+        console.log('Error al enviar el formulario');
+    }
 });
-
+}
+function bajarCantidad(id_pedido) {
+  var formData = {
+    id_pedido: id_pedido,
+  };
+  $.ajax({
+    url: '../api/subirCarrito.php',
+    type: 'POST',
+    data: formData,
+    success: function(response) {
+      var spanCantidad = document.getElementById('cantidad-' + id_pedido);
+      var cantidad = parseInt(spanCantidad.innerText);
+      cantidad += 1;
+      spanCantidad.innerText = cantidad;
+    },
+    error: function() {
+        console.log('Error al enviar el formulario');
+    }
+});
+}
 function resetear() {
   var carritoDivs = document.querySelectorAll('[name="carrito_div"]');
   carritoDivs.forEach(function (carritoDiv) {

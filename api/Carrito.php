@@ -57,7 +57,7 @@ include __DIR__ . '/conexion.php';
   </div>
 
 
-
+  <script src="../js/carrito.js"></script>  
 </body>
 
 </html>
