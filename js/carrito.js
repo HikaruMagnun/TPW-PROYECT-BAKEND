@@ -58,12 +58,8 @@ function eliminarFila(id_pedido) {
     data: formData,
     success: function (response) {
       var fila = document.getElementById(id_pedido);
-
-      // Verificar si se encontró la fila
-      if (fila) {
-        // Eliminar la fila
-        fila.remove();
-      }
+      fila.remove();
+      
     },
     error: function () {
       console.log("Error al enviar el formulario");
