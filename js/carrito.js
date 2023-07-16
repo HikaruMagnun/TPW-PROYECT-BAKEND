@@ -29,7 +29,7 @@ function bajarCantidad(id_pedido) {
       var spanCantidad = document.getElementById("cantidad-" + id_pedido);
       var cantidad = parseInt(spanCantidad.innerText);
       if (cantidad == 1) {
-        var fila = document.getElementById(id_pedido);
+        var fila = document.getElementById(id_pedido.toString());
 
         // Verificar si se encontró la fila
         if (fila) {
@@ -58,7 +58,7 @@ function eliminarFila(id_pedido) {
     data: formData,
     success: function (response) {
       console.log(id_pedido);
-      var fila = document.getElementById(id_pedido);
+      var fila = document.getElementById(id_pedido.toString());
       fila.remove();
       
     },
