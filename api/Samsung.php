@@ -14,6 +14,7 @@ $correoUsuario = $_GET['correo_usuario'];
     <link rel="stylesheet" href="../css/celulares.css">
     <title>MoViLand</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -44,10 +45,33 @@ $correoUsuario = $_GET['correo_usuario'];
     </div>
     <script src="../js/celulares.js"></script>
     <script>
+        $(document).ready(function() {
+            $('#myForm').submit(function(event) {
+                event.preventDefault(); // Prevenir el envío predeterminado del formulario
+
+                // Obtener los datos del formulario
+                var formData = $(this).serialize();
+
+                // Enviar los datos del formulario mediante AJAX
+                $.ajax({
+                    url: '../api/añadirCarrito.php',
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        // Realizar acciones después de recibir la respuesta del servidor
+                        mostrarNotificacion();
+                    },
+                    error: function() {
+                        console.log('Error al enviar el formulario');
+                    }
+                });
+            });
+        });
+
         function enviarFormulario(event) {
             event.preventDefault(); // Prevenir el envío predeterminado del formulario
             mostrarNotificacion();
-            
+
         }
 
         function mostrarNotificacion() {
