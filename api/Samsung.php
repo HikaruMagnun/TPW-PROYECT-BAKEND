@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+// Obtener el valor del parámetro "correo_usuario" de la URL
+
+  $correoUsuario = $_GET['correo_usuario'];
+ 
+
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

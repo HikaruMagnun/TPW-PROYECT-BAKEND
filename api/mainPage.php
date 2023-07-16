@@ -43,7 +43,7 @@ $correoUsuario = $_COOKIE['correo_usuario'];
               <div
                 class="menu_pestaña_elememt"
                 id="menu_pestaña_elememt_categorias"
-                data-url="../api/Samsung.php"
+                data-url="../api/Samsung.php?correo_usuario=<?php echo urlencode($_COOKIE['correo_usuario']); ?>"
               >
                 &nbsp;
                 <i class="fa-solid fa-bars"></i>
