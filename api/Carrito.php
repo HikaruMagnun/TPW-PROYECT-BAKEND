@@ -14,7 +14,7 @@
 // Obtener el valor del parámetro "correo_usuario" de la URL
 
 $correoUsuario = $_GET['correo_usuario'];
-
+include __DIR__ . '/conexion.php';
 
 ?>
 
@@ -32,6 +32,7 @@ $correoUsuario = $_GET['correo_usuario'];
       que nos hayas elegido y te deseamos un excelente día. ¡Gracias :3! 😉😊😊😊
     </p>
   </header>
+  <br><br>
   <table>
     <thead>
       <tr>

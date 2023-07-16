@@ -1,6 +1,6 @@
 <?
 
-include __DIR__ . '/conexion.php';
+
 
 
 $querySelect = 'SELECT C."Nombre", C."Precio", cantidad, P.id_celular, P.id 
