@@ -57,9 +57,10 @@ function eliminarFila(id_pedido) {
     type: "POST",
     data: formData,
     success: function (response) {
-      console.log(id_pedido);
+      console.log("fila-"+ id_pedido);
       var fila = document.getElementById("fila-"+ id_pedido);
-      fila.remove();
+      console.log(fila);
+      fila.parentNode.removeChild(fila);
       
     },
     error: function () {
