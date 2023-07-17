@@ -1,64 +1,199 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-.inicioSesion {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+    background-image: url("https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-wICgI-S0_3V2PzQl90a-Vk0NRdSsccjeuQtbueq7C3fatXtmlS5lS6LjhHDhK0ZVUSpem9Nat2PjcLS9LmBXPKRqCTTw=w1366-h653");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#b6fa2e,#b6fa2e,#b6fa2e);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#b6fa2e,#b6fa2e,#b6fa2e);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderline::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#1696e6);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.box form .inputBox{
+    position: relative;
     width: 300px;
-    margin: 0 auto;
-    margin-top: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
 }
-
-.inicioSesion h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.inicioSesion label {
-    display: block;
-    font-weight: bold;
-}
-
-.inicioSesion input[type="email"],
-.inicioSesion input[type="password"] {
+.box form .inputBox input{
+    position: relative;
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding-right: 1px;
-}
-
-.inicioSesion input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.box form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;     
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+    color:#fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+.box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
 }
-
-.inicioSesion input[type="submit"]:hover {
-    background-color: #45a049;
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i{
+    height: 44px;
 }
-
-h3 {
-    text-align: center;
-    margin-top: 20px;
+.box form .links{
+    display: flex;
+    justify-content: space-between;
 }
-
-a {
-    display: block;
-    text-align: center;
+.box form .links a {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+.box form .links h3 {
+    margin: 10px 0;
+    
+    font-size: 0.9em;
+    color: #e4d9d9;
+    text-decoration: none;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2){
+    color: #fff;
+}
+.box form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    
     margin-top: 10px;
-    color: #4CAF50;
 }
-
-a:hover {
-    text-decoration: underline;
+.box form input[type="submit"]:active{
+    opacity: 0.8;
 }
