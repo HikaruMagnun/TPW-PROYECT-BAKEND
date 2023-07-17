@@ -75,7 +75,7 @@ function actualizarSubtotal (id_pedido) {
   var cantidad = document.getElementById("fila-"+ id_pedido);
   var precio = document.getElementById("cantidad-"+ id_pedido);
   var Ncantidad = parseInt(cantidad.innerText);
-  var Nprecio = parseInt(precio.innerText);
+  var Nprecio = parseInt(precio.innerText.replace(/[^\d.-]/g, ''));
   subtotal = Nprecio*Ncantidad;
   var total = document.getElementById("total-"+ id_pedido);
   total.innerText = subtotal;
