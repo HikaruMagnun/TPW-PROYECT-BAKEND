@@ -27,7 +27,7 @@ if ($result) {
         onclick="bajarCantidad(' . $row['id'] . ')"> ↓ </button>';
         echo '</td>';
         $total = $row['Precio'] *  $row['cantidad'];
-        echo '<td id="total-'. $row['id'] .'" class="subtotal">$'. $total .'</td>';
+        echo '<td id="total-'. $row['id'] .'" class="subtotal">S/.'. $total .'</td>';
         echo ' <td><button onclick="eliminarFila(' . $row['id'] . ')">Eliminar</button></td>';
         echo'</tr>';
     }

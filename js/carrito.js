@@ -12,13 +12,14 @@ function subirCantidad(id_pedido) {
       cantidad += 1;
       spanCantidad.innerText = cantidad;
       actualizarSubtotal(id_pedido);
+      sumarTotalColumna();
     },
     error: function () {
       console.log("Error al enviar el formulario");
     },
   });
   
-sumarTotalColumna();
+
 }
 function bajarCantidad(id_pedido) {
   var formData = {
@@ -39,10 +40,12 @@ function bajarCantidad(id_pedido) {
           // Eliminar la fila
           fila.parentNode.removeChild(fila);
         }
+        sumarTotalColumna();
       } else {
         cantidad -= 1;
         spanCantidad.innerText = cantidad;
         actualizarSubtotal(id_pedido);
+        sumarTotalColumna();
       }
     },
     error: function () {
@@ -51,7 +54,7 @@ function bajarCantidad(id_pedido) {
     
   });
   
-sumarTotalColumna();
+
 }
 
 
@@ -68,7 +71,7 @@ function eliminarFila(id_pedido) {
       var fila = document.getElementById("fila-"+ id_pedido);
       console.log(fila);
       fila.parentNode.removeChild(fila);
-      
+      sumarTotalColumna();
     },
     error: function () {
       console.log("Error al enviar el formulario");
@@ -88,7 +91,7 @@ function actualizarSubtotal(id_pedido) {
   console.log("Cantodad" +Ncantidad)
   subtotal = Nprecio * Ncantidad;
   var total = document.getElementById("total-" + id_pedido);
-  total.innerText = subtotal;
+  total.innerText = "S/."+subtotal;
 }
 
 function sumarTotalColumna() {
@@ -96,7 +99,7 @@ function sumarTotalColumna() {
   var total = 0;
   
   for (var i = 0; i < subtotalElements.length; i++) {
-    var subtotal = parseInt(subtotalElements[i].innerText);
+    var subtotal = parseInt(subtotalElements[i].innerText.substring(3));
     total += subtotal;
   }
   
