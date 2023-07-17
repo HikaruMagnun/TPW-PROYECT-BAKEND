@@ -22,10 +22,12 @@ if ($result) {
         echo '  <button 
         onclick="subirCantidad(' . $row['id'] . ')"> ↑ </button>';
         echo '  <span id="cantidad-' . $row['id'] . '">' . $row['cantidad'] . ' </span>';
+        
         echo '  <button 
         onclick="bajarCantidad(' . $row['id'] . ')"> ↓ </button>';
         echo '</td>';
-        echo '<td id="total-1">$100</td>';
+        $total = $row['Precio'] *  $row['cantidad'];
+        echo '<td id="total-1">$'. $total .'</td>';
         echo ' <td><button onclick="eliminarFila(' . $row['id'] . ')">Eliminar</button></td>';
         echo'</tr>';
     }
