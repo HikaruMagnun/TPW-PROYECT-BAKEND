@@ -80,6 +80,14 @@ include __DIR__ . '/conexion.php';
             <label for="card-holder">Titular de la Tarjeta:</label>
             <input type="text" id="card-holder" name="card-holder" required>
           </div>
+        </div>
+
+        <div>
+          <div class="cvv">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+          </div>
+
           <div class="datos">
             <label for="card-issuer">Emisor de la Tarjeta:</label>
             <select id="card-issuer" name="card-issuer" required>
@@ -90,23 +98,12 @@ include __DIR__ . '/conexion.php';
             </select>
           </div>
         </div>
+      </div>
 
-        <div>
-          <div class="cvv">
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
-          </div>
-
-          <div class="total">
-            <label for="tatal">TOTAl:</label>
-            <h1>Total a pagar <span id="totalTotal"></span></h1>
-          </div>
-
-          <div class="carrito_registro-botones">
-            <input type="submit" value="$ PAGAR" id="enviar" />
-            <input type="reset" value="CANCELAR" id="cancelar" onclick="cerrar()" />
-          </div>
-        </div>
+      <div class="pagar-botones">
+        <input type="submit" value="$ PAGAR" id="enviar" />
+        <input type="button" value="CANCELAR" id="cancelar" onclick="cerrar()" />
+      </div>
 
     </form>
   </div>

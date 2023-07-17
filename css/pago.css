@@ -75,7 +75,7 @@
 
 label {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -86,44 +86,40 @@ input[type="number"],
 select {
     width: 90%;
     padding: 7px;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-/*
-.card-details {
+.pagar-botones{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.card-details>div {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.card-details>div:last-child {
-    margin-right: 0;
-}
-
-.cvv {
-    max-width: 150px;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+input[type="submit"],
+#cancelar{
+    width: 20%;
+    padding: 7px;
+    margin: auto;
     cursor: pointer;
+    border-radius: 13px;
+    margin-top: 10px;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+input[type="submit"]{
+    background-color: #75ff7c;
+    border-color: #007e06;
+}
+input[type="submit"]:hover{
+    background-color: #16ff21;
 }
 
-.error {
-    color: red;
-    margin-top: 5px;
-} */
+#cancelar{
+    background-color: #ff7575;
+    border-color: #7e0000;
+}
+
+#cancelar:hover{
+    background-color: #ff2d2d;
+    border-color: #7e0000;
+}
