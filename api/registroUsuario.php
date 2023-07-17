@@ -12,7 +12,7 @@
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
   if ( !$usuario) {
-    $query = 'INSERT into "USUARIOS" values (:correo,:contrasena);';
+    $query = 'INSERT into "USUARIOS" (correo,contraseña) values (:correo,:contrasena);';
     $stmt = $db->prepare($query);
     $stmt->bindParam(':correo', $correo);
     $stmt->bindParam(':contrasena', $contrasena);
