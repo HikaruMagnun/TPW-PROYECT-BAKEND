@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="../css/carrito.css" />
-  <link rel="stylesheet" href="../css/registro.css" />
+  <link rel="stylesheet" href="../css/pago.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>Carrito</title>
 </head>
@@ -53,12 +53,12 @@ include __DIR__ . '/conexion.php';
 
 
   <div class="carrito_opciones-input">
-    <input type="button" value="✔ ACEPTAR" class="carrito_opciones-aceptar" onclick="abrirRegistro()" />
-    <input type="reset" value="🔄 RESETEAR" class="carrito_opciones-resetear" onclick="resetear()" />
+    <input type="button" value="✔ ACEPTAR" class="carrito_opciones-aceptar" onclick="abrirPago()" />
   </div>
 
 
   <script src="../js/carrito.js"></script>  
+  <script src="../pago.js"></script>
 </body>
 
 </html>
