@@ -11,6 +11,7 @@ function subirCantidad(id_pedido) {
       var cantidad = parseInt(spanCantidad.innerText);
       cantidad += 1;
       spanCantidad.innerText = cantidad;
+      actualizarSubtotal(id_pedido);
     },
     error: function () {
       console.log("Error al enviar el formulario");
@@ -39,6 +40,7 @@ function bajarCantidad(id_pedido) {
       } else {
         cantidad -= 1;
         spanCantidad.innerText = cantidad;
+        actualizarSubtotal(id_pedido);
       }
     },
     error: function () {
@@ -67,6 +69,17 @@ function eliminarFila(id_pedido) {
       console.log("Error al enviar el formulario");
     },
   });
+}
+
+function actualizarSubtotal (id_pedido) {
+  var cantidad = document.getElementById("fila-"+ id_pedido);
+  var precio = document.getElementById("cantidad-"+ id_pedido);
+  var Ncantidad = parseInt(cantidad.innerText);
+  var Nprecio = parseInt(precio.innerText);
+  subtotal = Nprecio*Ncantidad;
+  var total = document.getElementById("total-"+ id_pedido);
+  total.innerText = subtotal;
+
 }
 function resetear() {
   var carritoDivs = document.querySelectorAll('[name="carrito_div"]');

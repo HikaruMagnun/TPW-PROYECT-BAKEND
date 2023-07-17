@@ -16,18 +16,18 @@ $result = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);
 if ($result) {
     foreach ($result as $row) {
         echo '<tr id="fila-'. $row['id'] .'">';
-        echo '<td>' . $row['Nombre'] . ' $</td>';
-        echo '<td>' . $row['Precio'] . '</td>';
+        echo '<td>' . $row['Nombre'] . ' </td>';
+        echo '<td id="precio-'. $row['id'] .'"> S/.' . $row['Precio'] . '</td>';
         echo '<td>';
         echo '  <button 
         onclick="subirCantidad(' . $row['id'] . ')"> ↑ </button>';
-        echo '  <span id="cantidad-' . $row['id'] . '">' . $row['cantidad'] . ' </span>';
+        echo '  <span id="cantidad-'. $row['id'] .'">' . $row['cantidad'] . ' </span>';
         
         echo '  <button 
         onclick="bajarCantidad(' . $row['id'] . ')"> ↓ </button>';
         echo '</td>';
         $total = $row['Precio'] *  $row['cantidad'];
-        echo '<td id="total-1">$'. $total .'</td>';
+        echo '<td id="total-'. $row['id'] .'">$'. $total .'</td>';
         echo ' <td><button onclick="eliminarFila(' . $row['id'] . ')">Eliminar</button></td>';
         echo'</tr>';
     }
