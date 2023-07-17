@@ -52,13 +52,67 @@ include __DIR__ . '/conexion.php';
   <h1>Total a pagar <span id="totalTotal"></span></h1>
 
 
-  <div class="carrito_opciones-input">
-    <input type="button" value="✔ ACEPTAR" class="carrito_opciones-aceptar" onclick="abrirPago()" />
+  <div id="overlay" class="overlay"></div>
+
+  <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" />
+
+
+  <div id="medioPago">
+    <h3 class="medioPago-h3">FORMULARIO DE PAGO</h3>
+
+    <div class="tarjeta">
+      <img src="../img/imagenPago.png" class="tarjeta-img">
+    </div>
+
+    <form onsubmit="return validateForm()" required>
+
+      <div class="rellenar">
+        <div>
+          <div class="datos">
+            <label for="card-number">Número de Tarjeta:</label>
+            <input type="text" id="card-number" name="card-number" required>
+          </div>
+          <div class="datos">
+            <label for="expiration-date">Fecha de Caducidad:</label>
+            <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/AA" required>
+          </div>
+          <div class="datos">
+            <label for="card-holder">Titular de la Tarjeta:</label>
+            <input type="text" id="card-holder" name="card-holder" required>
+          </div>
+          <div class="datos">
+            <label for="card-issuer">Emisor de la Tarjeta:</label>
+            <select id="card-issuer" name="card-issuer" required>
+              <option value="" disabled selected>Seleccione un emisor</option>
+              <option value="Visa">Visa</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="American Express">American Express</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="cvv">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+          </div>
+
+          <div class="total">
+            <label for="tatal">TOTAl:</label>
+            <h1>Total a pagar <span id="totalTotal"></span></h1>
+          </div>
+
+          <div class="carrito_registro-botones">
+            <input type="submit" value="$ PAGAR" id="enviar" />
+            <input type="reset" value="CANCELAR" id="cancelar" onclick="cerrar()" />
+          </div>
+        </div>
+
+    </form>
   </div>
 
-
-  <script src="../js/carrito.js"></script>  
-  <script src="../pago.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/pago.js"></script>
 </body>
 
 </html>
