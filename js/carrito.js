@@ -71,15 +71,17 @@ function eliminarFila(id_pedido) {
   });
 }
 
-function actualizarSubtotal (id_pedido) {
-  var cantidad = document.getElementById("fila-"+ id_pedido);
-  var precio = document.getElementById("cantidad-"+ id_pedido);
+function actualizarSubtotal(id_pedido) {
+  var cantidad = document.getElementById("cantidad-" + id_pedido);
+  var precio = document.getElementById("precio-" + id_pedido);
+  console.log(cantidad,precio)
   var Ncantidad = parseInt(cantidad.innerText);
-  var Nprecio = parseInt(precio.innerText.replace(/[^\d.-]/g, ''));
-  subtotal = Nprecio*Ncantidad;
-  var total = document.getElementById("total-"+ id_pedido);
+  var Nprecio = parseInt(precio.innerText.substring(3)); // Extraer el número sin "S/."
+  console.log("Precio" +Nprecio)
+  console.log("Cantodad" +Ncantidad)
+  subtotal = Nprecio * Ncantidad;
+  var total = document.getElementById("total-" + id_pedido);
   total.innerText = subtotal;
-
 }
 function resetear() {
   var carritoDivs = document.querySelectorAll('[name="carrito_div"]');
