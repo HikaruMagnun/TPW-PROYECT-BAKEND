@@ -15,7 +15,7 @@ $result = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);
 
 if ($result) {
     foreach ($result as $row) {
-        echo '<tr id="fila-'. $row['id'] .' ">';
+        echo '<tr id="fila-'. $row['id'] .'">';
         echo '<td>' . $row['Nombre'] . ' $</td>';
         echo '<td>' . $row['Precio'] . '</td>';
         echo '<td>';
