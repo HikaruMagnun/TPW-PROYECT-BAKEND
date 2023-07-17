@@ -61,7 +61,7 @@ include __DIR__ . '/conexion.php';
     <h3 class="medioPago-h3">FORMULARIO DE PAGO</h3>
 
     <div class="tarjeta">
-      <img src="../img/imagenPago.png" class="tarjeta-img">
+      <img src="../img/tarjetas.png" class="tarjeta-img">
     </div>
 
     <form onsubmit="return validateForm()" required>
