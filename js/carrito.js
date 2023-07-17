@@ -17,6 +17,8 @@ function subirCantidad(id_pedido) {
       console.log("Error al enviar el formulario");
     },
   });
+  
+sumarTotalColumna();
 }
 function bajarCantidad(id_pedido) {
   var formData = {
@@ -46,7 +48,10 @@ function bajarCantidad(id_pedido) {
     error: function () {
       console.log("Error al enviar el formulario");
     },
+    
   });
+  
+sumarTotalColumna();
 }
 
 
@@ -69,6 +74,8 @@ function eliminarFila(id_pedido) {
       console.log("Error al enviar el formulario");
     },
   });
+  
+sumarTotalColumna();
 }
 
 function actualizarSubtotal(id_pedido) {
@@ -83,6 +90,22 @@ function actualizarSubtotal(id_pedido) {
   var total = document.getElementById("total-" + id_pedido);
   total.innerText = subtotal;
 }
+
+function sumarTotalColumna() {
+  var subtotalElements = document.getElementsByClassName("subtotal");
+  var total = 0;
+  
+  for (var i = 0; i < subtotalElements.length; i++) {
+    var subtotal = parseInt(subtotalElements[i].innerText);
+    total += subtotal;
+  }
+  
+  var totalColumnaElement = document.getElementById("totalTotal");
+  totalColumnaElement.innerText = total;
+}
+
+sumarTotalColumna();
+
 function resetear() {
   var carritoDivs = document.querySelectorAll('[name="carrito_div"]');
   carritoDivs.forEach(function (carritoDiv) {

@@ -49,7 +49,7 @@ include __DIR__ . '/conexion.php';
 
     </tbody>
   </table>
-
+  <h1>Total a pagar <span id="totalTotal"></span></h1>
 
 
   <div class="carrito_opciones-input">
