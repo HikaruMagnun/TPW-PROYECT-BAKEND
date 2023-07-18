@@ -51,7 +51,7 @@ include __DIR__ . '/conexion.php';
 
     </tbody>
   </table>
-  <h1>Total a pagar: <span id="totalTotal"></span></h1>
+  <h5>Total a pagar: <span id="totalTotal"></span></h5>
 
 
   <div id="overlay" class="overlay"></div>
