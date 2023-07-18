@@ -20,7 +20,7 @@ $data = array(
     'quantity' => $quantity,
     'lc' => $lc,
     'image_url' => $image_url,
-    'return' => $return_url
+    //'return' => $return_url
 );
 
 // Realiza la solicitud a PayPal

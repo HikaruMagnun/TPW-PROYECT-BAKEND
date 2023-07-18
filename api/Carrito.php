@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../css/pago.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>Carrito</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=ATI8v_bq4V3a36l-vf_-ZgsZxmhzVFKZw01Ayxah-KXXHvsx-JrGEmmeRBAhehV1xDzX6rDc-Ve46OIc&currency=USD"></script>
+
 </head>
 
 <?php
@@ -20,8 +22,7 @@ include __DIR__ . '/conexion.php';
 ?>
 
 <body class="carrito_body">
-  <script src="https://www.paypal.com/sdk/js?client-id=AaXO4VBDor6k_EWMNTGrl5Du1opgbvAheEC-5tTEUeOYLmwlCxk0H4yhdF0Scvtc1A30sfkInrBxpbpP&currency=PEN">
-  </script>
+
   <header class="carrito_header">
     <h1 class="carrito_header-h1">
       <img class="carrito-img" src="https://lh3.googleusercontent.com/u/0/d/1qkhL9jTUCeZ4OBfofvYvNEw9xxSX5Pj7=w1366-h653-iv1" />&#160;CARRITO&#160;<img class="carrito-img" src="https://lh3.googleusercontent.com/u/0/d/1qkhL9jTUCeZ4OBfofvYvNEw9xxSX5Pj7=w1366-h653-iv1" />
@@ -53,12 +54,34 @@ include __DIR__ . '/conexion.php';
   </table>
   <h5>Total a pagar: <span id="totalTotal"></span></h5>
 
+  <br><br>
+  <div id="paypal-button-conteiner"></div>
+
 
   <div id="overlay" class="overlay"></div>
 
   <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" />
+
+  <script>
+    paypal.Buttons({
+      style: {
+        label: 'pay'
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: 200
+            }
+          }]
+        });
+      }
+      
+
+    }).render('#paypal-button-conteiner');
+  </script>
   <script src="../js/carrito.js"></script>
-<!--
+  <!--
   <div id="medioPago">
     <h3 class="medioPago-h3">FORMULARIO DE PAGO</h3>
 
@@ -166,10 +189,10 @@ include __DIR__ . '/conexion.php';
   </script>
   <script src="../js/pago.js"></script>
   -->
-  
-  
- 
-  
+
+
+
+
 </body>
 
 </html>
