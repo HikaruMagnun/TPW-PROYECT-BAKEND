@@ -99,11 +99,11 @@ echo $correoUsuario;
           type: "POST",
           data: formData,
           success: function(response) {
-            console.log("sucess" + correo);
+            console.log("sucess" );
 
           },
           error: function() {
-            console.log("Error al enviar el formulario " + correo);
+            console.log("Error al enviar el formulario " );
           },
         })
       },

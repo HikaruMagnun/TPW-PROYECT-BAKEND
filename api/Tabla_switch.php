@@ -3,7 +3,7 @@ include __DIR__ . '/conexion.php';
 $correo = $_POST['correo'];
 
 
-try {
+
    // Iniciar una transacción
    $db->beginTransaction();
     // Consulta para eliminar las filas según el correo
@@ -21,8 +21,4 @@ try {
     header("Location:/api/Carrito.php?correo_usuario=". $correo);
 
     echo "Filas eliminadas y trasladadas a Pedidos_Pagados correctamente.";
-} catch (PDOException $e) {
-    // Revertir la transacción en caso de error
-    $db->rollBack();
-    echo "Error: " . $e->getMessage();
-}
+?>
