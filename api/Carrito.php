@@ -69,7 +69,7 @@ echo $correoUsuario;
   <div id="overlay" class="overlay"></div>
 
   <!-- <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" /> -->
-  
+
   <script>
     // Obtener el elemento
     var element = document.getElementById("totalTotal");
@@ -77,7 +77,7 @@ echo $correoUsuario;
     // Obtener el contenido del elemento y convertirlo a un número entero
     var content = parseInt(element.innerHTML);
     console.log(content);
-    
+
 
     function cargarContenido(archivo) {
       var iframe = window.frameElement;
@@ -118,8 +118,11 @@ echo $correoUsuario;
             console.log("Error al enviar el formulario ");
           },
         })
+        setTimeout(function() {
+          cargarContenido('../api/Carrito.php?correo_usuario=<?php echo $correoUsuario ?>')
+        }, 4000);
 
-        cargarContenido('../api/Carrito.php?correo_usuario=<?php echo $correoUsuario ?>')
+        
       },
 
       onCancel: function(data) {
