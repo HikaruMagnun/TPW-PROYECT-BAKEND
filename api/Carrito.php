@@ -5,11 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="../css/carrito.css" />
   <link rel="stylesheet" href="../css/pago.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://www.paypal.com/sdk/js?client-id=Adow969wx-VKKgPM85mH3JNGMLsAgkR04EQOMxoV9P3p35LSb930AQHDFdAJ6AU2Ch7lrBsNOft9YFFS&currency=PEN"></script>
   <title>Carrito</title>
 </head>
 <?php
