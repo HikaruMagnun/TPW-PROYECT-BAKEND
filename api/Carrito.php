@@ -79,14 +79,28 @@ include __DIR__ . '/conexion.php';
         });
       },
       onApprove: function(data, actions) {
-      
+        var formData = {
+          correo: <?php echo $correoUsuario ?>,
+        };
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: 'Gracias por su compra, Nos pondremos en contacto contigo',
+          title: 'Gracias por su compra, Nos pondremos en contacto usted',
           showConfirmButton: false,
           timer: 3000
         })
+        $.ajax({
+          url: "../api/Tabla_switch.php",
+          type: "POST",
+          data: formData,
+          success: function(response) {
+            console.log("sucess" +correo);
+
+          },
+          error: function() {
+            console.log("Error al enviar el formulario " + correo);
+          },
+        });
       },
 
       onCancel: function(data) {
