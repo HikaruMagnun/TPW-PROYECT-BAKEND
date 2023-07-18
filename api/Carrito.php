@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../css/pago.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>Carrito</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://www.paypal.com/sdk/js?client-id=ATI8v_bq4V3a36l-vf_-ZgsZxmhzVFKZw01Ayxah-KXXHvsx-JrGEmmeRBAhehV1xDzX6rDc-Ve46OIc&currency=USD"></script>
 
 </head>
@@ -60,7 +62,7 @@ include __DIR__ . '/conexion.php';
 
   <div id="overlay" class="overlay"></div>
 
-  <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" />
+  <!-- <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" /> -->
 
   <script>
     paypal.Buttons({
@@ -68,15 +70,38 @@ include __DIR__ . '/conexion.php';
         label: 'pay'
       },
       createOrder: function(data, actions) {
+        // Obtener el valor actualizado del elemento "totalTotal"
+        var totalValue = document.getElementById("totalTotal").value;
+
+        // Crear la orden con el valor obtenido
         return actions.order.create({
           purchase_units: [{
             amount: {
-              value: 200
+              value: totalValue
             }
           }]
         });
-      }
+      },
+      onApprove: function(data, actions) {
       
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Gracias por su compra, Nos pondremos en contacto contigo',
+          showConfirmButton: false,
+          timer: 3000
+        })
+      },
+
+      onCancel: function(data) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Pago Cancelado!',
+
+        })
+      }
+
 
     }).render('#paypal-button-conteiner');
   </script>
