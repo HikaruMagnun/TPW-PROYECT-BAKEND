@@ -71,7 +71,7 @@ include __DIR__ . '/conexion.php';
       },
       createOrder: function(data, actions) {
         // Obtener el valor actualizado del elemento "totalTotal"
-        var totalValue = document.getElementById("totalTotal").value;
+        var totalValue = document.getElementById("totalTotal");
 
         // Crear la orden con el valor obtenido
         return actions.order.create({
