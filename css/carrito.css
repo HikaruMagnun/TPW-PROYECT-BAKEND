@@ -2,25 +2,48 @@
   margin: 0px;
   padding: 0px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
 
-table th, table td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+table {
+  width: 93%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: rgb(13, 62, 83);
+  color: white;
 }
 
 table th {
-  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(2, 29, 41);
+  font-size: 23px;
+  color: white;
+  border: 3px solid rgb(12, 81, 112);
 }
 
-table tr:hover {
-  background-color: #f5f5f5;
+table td {
+  padding: 7px;
+  text-align: center;
+  border: 3px solid rgb(12, 81, 112);
+  font-size: 17px;
+} 
+
+table tr:hover{
+  background-color: rgb(53, 111, 136);
+  color: #000000;
 }
 
+table button{
+  border-radius: 10px;
+  font-size: 17px;
+  padding: 4px;
+  background-color: rgb(112, 112, 112);
+  border: 3px solid rgb(56, 56, 56);
+}
+
+table button:hover{
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
 
 .carrito_body {
   background-color: #132849;
@@ -150,39 +173,6 @@ ul {
   border-radius: 3px;
   padding: 5px;
   color: red;
-}
-
-.carrito_opciones-aceptar {
-  background-color: #6bf172;
-  color: #000000;
-  font-weight: bold;
-  border: 3px solid #007e06;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.carrito_opciones-aceptar:hover {
-  background-color: #047a0a;
-  color: #ffffff;
-}
-
-.carrito_opciones-resetear {
-  background-color: #f16c6c;
-  color: #000000;
-  font-weight: bold;
-  border: 3px solid #830202;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-left: 12px;
-}
-
-.carrito_opciones-resetear:hover {
-  background-color: #f70000;
-  color: #ffffff;
 }
 
 .overlay1 {

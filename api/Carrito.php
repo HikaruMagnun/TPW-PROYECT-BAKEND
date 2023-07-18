@@ -10,6 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>Carrito</title>
 </head>
+
 <?php
 // Obtener el valor del parámetro "correo_usuario" de la URL
 
@@ -50,7 +51,7 @@ include __DIR__ . '/conexion.php';
 
     </tbody>
   </table>
-  <h1>Total a pagar <span id="totalTotal"></span></h1>
+  <h1>Total a pagar: <span id="totalTotal"></span></h1>
 
 
   <div id="overlay" class="overlay"></div>

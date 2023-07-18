@@ -1,8 +1,4 @@
 <?
-
-
-
-
 $querySelect = 'SELECT C."Nombre", C."Precio", cantidad, P.id_celular, P.id 
                 FROM "Pedidos" P, "Celulares" C 
                 WHERE C."id" = P."id_celular" AND P.correo = :correo';
