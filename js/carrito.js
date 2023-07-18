@@ -149,12 +149,17 @@ function pagar() {
     },
     success: function (response) {
       // Maneja la respuesta del servidor
-      console.log(response);
-    },
-    error: function () {
-      console.log("Error al enviar la solicitud al servidor");
-    },
-  });
+      var popup = window.open(response, "_blank", "width=600,height=400");
+
+    // Verifica si la ventana emergente se bloqueó por el navegador
+    if (popup == null || typeof popup === "undefined") {
+      alert("La ventana emergente fue bloqueada por el navegador. Habilita las ventanas emergentes para continuar con el pago.");
+    }
+  },
+  error: function () {
+    console.log("Error al enviar la solicitud al servidor");
+  },
+});
   
  
  
