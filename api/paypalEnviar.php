@@ -27,15 +27,9 @@ $data = array(
 $paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; // URL de PayPal Sandbox
 //$paypal_url = 'https://www.paypal.com/cgi-bin/webscr'; // URL de PayPal en producción
 
-// Envía la solicitud utilizando cURL
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $paypal_url);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$response = curl_exec($ch);
-curl_close($ch);
+// Construye la URL de redirección de PayPal
+$redirect_url = $paypal_url . '?' . http_build_query($data);
 
-// Maneja la respuesta y devuelve la información al cliente
-echo $response;
+// Devuelve la URL de redirección a PayPal
+echo $redirect_url;
 ?>
