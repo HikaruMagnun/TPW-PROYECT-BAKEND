@@ -134,7 +134,7 @@ function cerrarEmergente() {
 
 function pagar() {
   $.ajax({
-    url: "https://www.sandbox.paypal.com/cgi-bin/webscr",
+    url: "../api/paypalEnviar.php",
     type: "POST",
     data: {
       business: "sb-1sx47w26223345@business.example.com",
@@ -148,15 +148,21 @@ function pagar() {
       return: "http://tpw-proyect-bakend.vercel.app/api/receptor.php"
     },
     success: function (response) {
-      // Manejar la respuesta exitosa del pago de PayPal
-      console.log("Pago exitoso");
-      // Aquí puedes realizar acciones adicionales después de que se haya completado el pago
-    },
-    error: function () {
-      console.log("Error al enviar el formulario");
-      // Manejar el error en caso de que no se pueda realizar el pago
-    },
-  });
+      // Maneja la respuesta del servidor
+      var popup = window.open(response, "_blank", "width=600,height=400");
+
+    // Verifica si la ventana emergente se bloqueó por el navegador
+    if (popup == null || typeof popup === "undefined") {
+      alert("La ventana emergente fue bloqueada por el navegador. Habilita las ventanas emergentes para continuar con el pago.");
+    }
+  },
+  error: function () {
+    console.log("Error al enviar la solicitud al servidor");
+  },
+});
+  
+ 
+ 
   
   
 }
