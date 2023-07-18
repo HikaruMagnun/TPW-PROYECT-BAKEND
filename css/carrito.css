@@ -25,14 +25,14 @@ table td {
   text-align: center;
   border: 3px solid rgb(12, 81, 112);
   font-size: 17px;
-} 
+}
 
-table tr:hover{
-  background-color: rgb(53, 111, 136);
+table tr:hover {
+  background-color: rgb(75, 163, 201);
   color: #000000;
 }
 
-table button{
+table button {
   border-radius: 10px;
   font-size: 17px;
   padding: 4px;
@@ -40,9 +40,32 @@ table button{
   border: 3px solid rgb(56, 56, 56);
 }
 
-table button:hover{
+table button:hover {
   background-color: rgb(56, 56, 56);
   color: white;
+}
+
+h5 {
+  margin-top: 20px;
+  margin-left: 7%;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: rgb(156, 156, 156);
+}
+
+h5 span {
+  font-style: italic;
+  animation: cambio-color 1s infinite;
+}
+
+h5 span::before{
+  content: "S/.";
+}
+
+@keyframes cambio-color {
+  0% { color: rgb(152, 255, 131); }
+  50% { color: rgb(57, 212, 26); }
+  100% { color: rgb(38, 124, 21); }
 }
 
 .carrito_body {
@@ -116,9 +139,11 @@ table button:hover{
   0% {
     border-color: #b6fa2e;
   }
+
   50% {
     border-color: #88ca04;
   }
+
   100% {
     border-color: #699c03;
   }
@@ -315,7 +340,7 @@ ul {
     font-size: 20px;
   }
 
-  
+
 
   .carrito_opciones-aceptar {
     border: 2px solid #007e06;
