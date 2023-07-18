@@ -22,6 +22,11 @@ $correoUsuario = $_GET['correo_usuario'];
 include __DIR__ . '/conexion.php';
 
 ?>
+<script>
+  var formData = {
+    correo: <?php echo $correoUsuario ?>
+  }
+</script>
 
 <body class="carrito_body">
 
@@ -79,9 +84,7 @@ include __DIR__ . '/conexion.php';
         });
       },
       onApprove: function(data, actions) {
-        var formData = {
-          correo: <?php echo $correoUsuario ?>,
-        };
+
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -89,18 +92,19 @@ include __DIR__ . '/conexion.php';
           showConfirmButton: false,
           timer: 3000
         })
+
         $.ajax({
           url: "../api/Tabla_switch.php",
           type: "POST",
           data: formData,
           success: function(response) {
-            console.log("sucess" +correo);
+            console.log("sucess" + correo);
 
           },
           error: function() {
             console.log("Error al enviar el formulario " + correo);
           },
-        });
+        })
       },
 
       onCancel: function(data) {
