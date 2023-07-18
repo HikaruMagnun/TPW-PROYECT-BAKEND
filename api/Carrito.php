@@ -56,8 +56,8 @@ include __DIR__ . '/conexion.php';
   <div id="overlay" class="overlay"></div>
 
   <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" />
-
-
+  <script src="../js/carrito.js"></script>
+<!--
   <div id="medioPago">
     <h3 class="medioPago-h3">FORMULARIO DE PAGO</h3>
 
@@ -163,9 +163,12 @@ include __DIR__ . '/conexion.php';
       }
     }).render('#paypal-button-container');
   </script>
-
-  <script src="../js/carrito.js"></script>
   <script src="../js/pago.js"></script>
+  -->
+  
+  
+ 
+  
 </body>
 
 </html>

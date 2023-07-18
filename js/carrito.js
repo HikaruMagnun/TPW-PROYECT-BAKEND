@@ -131,3 +131,32 @@ function cerrarEmergente() {
   var popup = document.getElementById("carrito_mensaje");
   popup.style.display = "none";
 }
+
+function pagar() {
+  $.ajax({
+    url: "https://www.sandbox.paypal.com/cgi-bin/webscr",
+    type: "POST",
+    data: {
+      business: "sb-1sx47w26223345@business.example.com",
+      cmd: "_xclick",
+      item_name: "Lampara de escritorio",
+      amount: "13.00",
+      currency_code: "PEN",
+      quantity: "2",
+      lc: "es_ES",
+      image_url: "https://picsum.photos/150/150",
+      return: "http://tpw-proyect-bakend.vercel.app/api/receptor.php"
+    },
+    success: function (response) {
+      // Manejar la respuesta exitosa del pago de PayPal
+      console.log("Pago exitoso");
+      // Aquí puedes realizar acciones adicionales después de que se haya completado el pago
+    },
+    error: function () {
+      console.log("Error al enviar el formulario");
+      // Manejar el error en caso de que no se pueda realizar el pago
+    },
+  });
+  
+  
+}
