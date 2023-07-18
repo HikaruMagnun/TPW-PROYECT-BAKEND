@@ -28,7 +28,7 @@ if ($result) {
         echo'</tr>';
     }
 }else{
-    echo '<h1> AUN NO HA REALIZADO NINGUNA COMPRA</h1>';
+    echo '<h1 class="carrito_header-h1"> AUN NO HA REALIZADO NINGUNA COMPRA</h1>';
 }
 
 
