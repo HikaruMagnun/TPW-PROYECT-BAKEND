@@ -70,14 +70,10 @@ include __DIR__ . '/conexion.php';
         label: 'pay'
       },
       createOrder: function(data, actions) {
-        // Obtener el valor actualizado del elemento "totalTotal"
-        var totalValue = document.getElementById("totalTotal").value;
-        var amountValue = parseInt(totalValue, 10);
-        // Crear la orden con el valor obtenido
         return actions.order.create({
           purchase_units: [{
             amount: {
-              value: amountValue
+              value: 200
             }
           }]
         });
