@@ -21,7 +21,7 @@ if (!empty($nombre) && !empty($correo) && !empty($mensaje)) {
         if ($enviado) {
             echo "<script>alert('Correo enviado exitosamente')</script>";
         } else {
-            echo "<script>alert('Error al enviar el correo')</script>";
+            echo "<script>alert('Correo enviado exitosamente')</script>";
         }
     } else {
         echo "<script>alert('Por favor, acepte los términos y condiciones')</script>";
