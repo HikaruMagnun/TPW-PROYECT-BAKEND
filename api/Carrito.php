@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/carrito.css" />
   <link rel="stylesheet" href="../css/pago.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=Adow969wx-VKKgPM85mH3JNGMLsAgkR04EQOMxoV9P3p35LSb930AQHDFdAJ6AU2Ch7lrBsNOft9YFFS&currency=PEN"></script>
   <title>Carrito</title>
 </head>
 <?php
@@ -20,6 +21,8 @@ include __DIR__ . '/conexion.php';
 ?>
 
 <body class="carrito_body">
+  <script src="https://www.paypal.com/sdk/js?client-id=AaXO4VBDor6k_EWMNTGrl5Du1opgbvAheEC-5tTEUeOYLmwlCxk0H4yhdF0Scvtc1A30sfkInrBxpbpP&currency=PEN">
+  </script>
   <header class="carrito_header">
     <h1 class="carrito_header-h1">
       <img class="carrito-img" src="https://lh3.googleusercontent.com/u/0/d/1qkhL9jTUCeZ4OBfofvYvNEw9xxSX5Pj7=w1366-h653-iv1" />&#160;CARRITO&#160;<img class="carrito-img" src="https://lh3.googleusercontent.com/u/0/d/1qkhL9jTUCeZ4OBfofvYvNEw9xxSX5Pj7=w1366-h653-iv1" />
@@ -97,6 +100,12 @@ include __DIR__ . '/conexion.php';
               <option value="American Express">American Express</option>
             </select>
           </div>
+
+          <div class="datos">
+            <label for="card-issuer">Total:</label>
+            <span>$ 500</span>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -107,6 +116,55 @@ include __DIR__ . '/conexion.php';
 
     </form>
   </div>
+
+  <div id="paypal-button.conteiner"></div>
+
+  <script>
+    paypal.Buttons({
+      // Order is created on the server and the order id is returned
+      createOrder() {
+        return fetch("/my-server/create-paypal-order", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // use the "body" param to optionally pass additional order information
+            // like product skus and quantities
+            body: JSON.stringify({
+              cart: [{
+                sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+                quantity: "YOUR_PRODUCT_QUANTITY",
+              }, ],
+            }),
+          })
+          .then((response) => response.json())
+          .then((order) => order.id);
+      },
+      // Finalize the transaction on the server after payer approval
+      onApprove(data) {
+        return fetch("/my-server/capture-paypal-order", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              orderID: data.orderID
+            })
+          })
+          .then((response) => response.json())
+          .then((orderData) => {
+            // Successful capture! For dev/demo purposes:
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+            const transaction = orderData.purchase_units[0].payments.captures[0];
+            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            // When ready to go live, remove the alert and show a success message within this page. For example:
+            // const element = document.getElementById('paypal-button-container');
+            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+            // Or go to another URL:  window.location.href = 'thank_you.html';
+          });
+      }
+    }).render('#paypal-button-container');
+  </script>
 
   <script src="../js/carrito.js"></script>
   <script src="../js/pago.js"></script>
