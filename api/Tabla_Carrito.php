@@ -27,6 +27,8 @@ if ($result) {
         echo ' <td><button onclick="eliminarFila(' . $row['id'] . ')">Eliminar</button></td>';
         echo'</tr>';
     }
+}else{
+    echo '<h1> AUN NO HA REALIZADO NINGUNA COMPRA</h1>';
 }
 
 
