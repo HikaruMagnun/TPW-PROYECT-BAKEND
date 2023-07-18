@@ -134,7 +134,7 @@ function cerrarEmergente() {
 
 function pagar() {
   $.ajax({
-    url: "https://www.sandbox.paypal.com/cgi-bin/webscr",
+    url: "../api/paypalEnviar.php",
     type: "POST",
     data: {
       business: "sb-1sx47w26223345@business.example.com",
@@ -148,15 +148,16 @@ function pagar() {
       return: "http://tpw-proyect-bakend.vercel.app/api/receptor.php"
     },
     success: function (response) {
-      // Manejar la respuesta exitosa del pago de PayPal
-      console.log("Pago exitoso");
-      // Aquí puedes realizar acciones adicionales después de que se haya completado el pago
+      // Maneja la respuesta del servidor
+      console.log(response);
     },
     error: function () {
-      console.log("Error al enviar el formulario");
-      // Manejar el error en caso de que no se pueda realizar el pago
+      console.log("Error al enviar la solicitud al servidor");
     },
   });
+  
+ 
+ 
   
   
 }
