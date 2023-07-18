@@ -20,13 +20,14 @@
 
 $correoUsuario = $_GET['correo_usuario'];
 include __DIR__ . '/conexion.php';
-
+echo $correoUsuario;
 ?>
 <script>
   var formData = {
-    correo: <?php echo $correoUsuario ?>
-  }
+    correo: "<?php echo $correoUsuario; ?>"
+  };
 </script>
+
 
 <body class="carrito_body">
 
