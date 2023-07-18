@@ -69,8 +69,20 @@ echo $correoUsuario;
   <div id="overlay" class="overlay"></div>
 
   <!-- <input type="button" value="✔ ACEPTAR" class="pagar" onclick="pagar()" /> -->
-
+  
   <script>
+    // Obtener el elemento
+    var element = document.getElementById("totalTotal");
+
+    // Obtener el contenido del elemento y convertirlo a un número entero
+    var content = parseInt(element.innerHTML);
+    console.log(content);
+    
+
+    function cargarContenido(archivo) {
+      var iframe = window.frameElement;
+      iframe.src = archivo;
+    }
     paypal.Buttons({
       style: {
         label: 'pay'
@@ -79,7 +91,7 @@ echo $correoUsuario;
         return actions.order.create({
           purchase_units: [{
             amount: {
-              value: 200
+              value: content
             }
           }]
         });
@@ -99,13 +111,15 @@ echo $correoUsuario;
           type: "POST",
           data: formData,
           success: function(response) {
-            console.log("sucess" );
+            console.log("sucess");
 
           },
           error: function() {
-            console.log("Error al enviar el formulario " );
+            console.log("Error al enviar el formulario ");
           },
         })
+
+        cargarContenido('../api/Carrito.php?correo_usuario=<?php echo $correoUsuario ?>')
       },
 
       onCancel: function(data) {
